@@ -1,0 +1,57 @@
+{
+  "manifest": {
+    "name": "@ngtools/webpack",
+    "version": "1.7.1",
+    "description": "Webpack plugin that AoT compiles your Angular components and modules.",
+    "main": "./src/index.js",
+    "typings": "src/index.d.ts",
+    "license": "MIT",
+    "keywords": [
+      "angular",
+      "webpack",
+      "plugin",
+      "aot"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angular/angular-cli.git"
+    },
+    "author": {
+      "name": "angular"
+    },
+    "bugs": {
+      "url": "https://github.com/angular/angular-cli/issues"
+    },
+    "homepage": "https://github.com/angular/angular-cli/tree/master/packages/@ngtools/webpack",
+    "engines": {
+      "node": ">= 4.1.0",
+      "npm": ">= 3.0.0"
+    },
+    "dependencies": {
+      "loader-utils": "^1.0.2",
+      "enhanced-resolve": "^3.1.0",
+      "magic-string": "^0.22.3",
+      "source-map": "^0.5.6"
+    },
+    "peerDependencies": {
+      "typescript": "^2.0.2",
+      "webpack": "^2.2.0 || ^3.0.0"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@ngtools/webpack-1.7.1-383ddd689845cf42fc755975f6440f75535f5016/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Angular Ahead-of-Time Webpack Plugin\n\nWebpack plugin that AoT compiles your Angular components and modules.\n\n## Usage\nIn your webpack config, add the following plugin and loader:\n\n```typescript\nimport {AotPlugin} from '@ngtools/webpack'\n\nexports = { /* ... */\n  module: {\n    rules: [\n      {\n        test: /\\.ts$/,\n        loader: '@ngtools/webpack',\n      }\n    ]\n  },\n\n  plugins: [\n    new AotPlugin({\n      tsConfigPath: 'path/to/tsconfig.json',\n      entryModule: 'path/to/app.module#AppModule'\n    })\n  ]\n}\n```\n\nThe loader works with the webpack plugin to compile your TypeScript. It's important to include both, and to not include any other TypeScript compiler loader.\n\n## Options\n\n* `tsConfigPath`. The path to the `tsconfig.json` file. This is required. In your `tsconfig.json`, you can pass options to the Angular Compiler with `angularCompilerOptions`.\n* `basePath`. Optional. The root to use by the compiler to resolve file paths. By default, use the `tsConfigPath` root.\n* `entryModule`. Optional if specified in `angularCompilerOptions`. The path and classname of the main application module. This follows the format `path/to/file#ClassName`.\n* `mainPath`. Optional if `entryModule` is specified. The `main.ts` file containing the bootstrap code. The plugin will use AST to determine the `entryModule`.\n* `skipCodeGeneration`. Optional, defaults to false. Disable code generation and do not refactor the code to bootstrap. This replaces `templateUrl: \"string\"` with `template: require(\"string\")` (and similar for styles) to allow for webpack to properly link the resources.\n* `typeChecking`. Optional, defaults to true. Enable type checking through your application. This will slow down compilation, but show syntactic and semantic errors in webpack.\n* `exclude`. Optional. Extra files to exclude from TypeScript compilation.\n* `compilerOptions`. Optional. Override options in `tsconfig.json`.\n\n## Features\nThe benefits and ability of using [`@ngtools/webpack`](https://www.npmjs.com/~ngtools) standalone from the Angular CLI as presented in [Stephen Fluin's Angular CLI talk](https://youtu.be/uBRK6cTr4Vk?t=6m45s) at Angular Connect 2016:\n\n* Compiles SCSS/LESS\n* TypeScript transpilation\n* Bundles JavaScript, CSS\n* Asset optimization\n* Virtual filesystem for assets\n * For serving local assets and compile versions.\n* Live-reload via websockets\n* Code splitting\n * Recognizing the use of `loadChildren` in the router, and bundling those modules separately so that any dependencies of those modules are not going to be loaded as part of your main bundle. These separate bundles will be pulled out of the critical path of your application, making your total application bundle much smaller and loading it much more performant.\n",
+    "licenseText": "The MIT License\n\nCopyright (c) 2017 Google, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.7.1.tgz#383ddd689845cf42fc755975f6440f75535f5016",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.7.1.tgz",
+    "hash": "383ddd689845cf42fc755975f6440f75535f5016",
+    "registry": "npm",
+    "packageName": "@ngtools/webpack"
+  },
+  "registry": "npm",
+  "hash": "383ddd689845cf42fc755975f6440f75535f5016"
+}

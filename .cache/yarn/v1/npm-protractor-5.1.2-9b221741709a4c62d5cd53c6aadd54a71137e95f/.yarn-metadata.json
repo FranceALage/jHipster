@@ -1,0 +1,106 @@
+{
+  "manifest": {
+    "name": "protractor",
+    "description": "Webdriver E2E test wrapper for Angular.",
+    "homepage": "https://github.com/angular/protractor",
+    "keywords": [
+      "angular",
+      "test",
+      "testing",
+      "webdriver",
+      "webdriverjs",
+      "selenium"
+    ],
+    "author": {
+      "name": "Julie Ralph",
+      "email": "ju.ralph@gmail.com"
+    },
+    "dependencies": {
+      "@types/node": "^6.0.46",
+      "@types/q": "^0.0.32",
+      "@types/selenium-webdriver": "~2.53.39",
+      "blocking-proxy": "0.0.5",
+      "chalk": "^1.1.3",
+      "glob": "^7.0.3",
+      "jasmine": "^2.5.3",
+      "jasminewd2": "^2.1.0",
+      "optimist": "~0.6.0",
+      "q": "1.4.1",
+      "saucelabs": "~1.3.0",
+      "selenium-webdriver": "3.0.1",
+      "source-map-support": "~0.4.0",
+      "webdriver-js-extender": "^1.0.0",
+      "webdriver-manager": "^12.0.6"
+    },
+    "devDependencies": {
+      "@types/chalk": "^0.4.28",
+      "@types/glob": "^5.0.29",
+      "@types/jasmine": "^2.5.47",
+      "@types/jasminewd2": "^2.0.0",
+      "@types/minimatch": "^2.0.28",
+      "@types/minimist": "^1.1.28",
+      "@types/optimist": "^0.0.29",
+      "body-parser": "~1.15.2",
+      "chai": "~3.5.0",
+      "chai-as-promised": "~5.3.0",
+      "clang-format": "1.0.49",
+      "expect.js": "~0.3.1",
+      "express": "~4.14.0",
+      "gulp": "^3.9.1",
+      "gulp-clang-format": "^1.0.23",
+      "gulp-tslint": "^7.0.1",
+      "jshint": "^2.9.2",
+      "lodash": "^4.5.1",
+      "marked": "^0.3.3",
+      "mocha": "2.5.3",
+      "rimraf": "~2.5.3",
+      "run-sequence": "^1.1.5",
+      "semver": "^5.3.0",
+      "tslint": "^4.1.1",
+      "tslint-eslint-rules": "^3.1.0",
+      "typescript": "^2.1.5",
+      "vrsource-tslint-rules": "^4.0.1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/angular/protractor.git"
+    },
+    "bin": {
+      "protractor": "bin/protractor",
+      "webdriver-manager": "bin/webdriver-manager"
+    },
+    "main": "built/index.js",
+    "typings": "built/index.d.ts",
+    "scripts": {
+      "format": "gulp format",
+      "install_testapp": "cd testapp && npm install",
+      "prepublish": "gulp prepublish",
+      "pretest": "gulp pretest",
+      "start": "cd testapp && npm start",
+      "test": "node scripts/test.js",
+      "website": "cd website && npm start",
+      "compile_to_es5": "gulp compile_to_es5"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": ">=6.9.x"
+    },
+    "version": "5.1.2",
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-protractor-5.1.2-9b221741709a4c62d5cd53c6aadd54a71137e95f/package.json",
+    "readmeFilename": "README.md",
+    "readme": "Protractor [![Build Status](https://travis-ci.org/angular/protractor.svg?branch=master)](https://travis-ci.org/angular/protractor) [![CircleCI Status](https://circleci.com/gh/angular/protractor.svg?style=shield)](https://circleci.com/gh/angular/protractor) [![Join the chat at https://gitter.im/angular/protractor](https://badges.gitter.im/angular/protractor.svg)](https://gitter.im/angular/protractor)\n==========\n\n[Protractor](http://angular.github.io/protractor) is an end-to-end test framework for [Angular](http://angular.io/) and [AngularJS](http://angularjs.org) applications. Protractor is a [Node.js](http://nodejs.org/) program built on top of [WebDriverJS](https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs). Protractor runs tests against your application running in a real browser, interacting with it as a user would.\n\nCompatibility\n-------------\n\nProtractor 5 is compatible with nodejs v6 and newer.\n\nProtractor works with AngularJS versions greater than 1.0.6/1.1.4, and is compatible with Angular applications. Note that for Angular apps, the `binding` and `model` locators are not supported. We recommend using `by.css`.\n\n\nGetting Started\n---------------\nSee the [Protractor Website](http://www.protractortest.org) for most documentation.\n\nTo get set up and running quickly:\n - Work through the [Tutorial](http://www.protractortest.org/#/tutorial)\n - See the [API](http://www.protractortest.org/#/api)\n\nOnce you are familiar with the tutorial, you’re ready to move on. To modify your environment, see the Protractor Setup docs. To start writing tests, see the Protractor Tests docs.\n\nTo better understand how Protractor works with the Selenium WebDriver and Selenium Server see the reference materials.\n\n\nGetting Help\n------------\n\nCheck the [Protractor FAQ](https://github.com/angular/protractor/blob/master/docs/faq.md) and read through the [Top 20 questions on StackOverflow](http://stackoverflow.com/questions/tagged/protractor?sort=votes&pageSize=20).\n\nPlease ask usage and debugging questions on [StackOverflow](http://stackoverflow.com/questions/tagged/protractor) (use the [\"protractor\"](http://stackoverflow.com/questions/ask?tags=protractor) tag), the [Gitter](https://gitter.im/angular/protractor) chat room, or in the [Angular discussion group](https://groups.google.com/forum/?fromgroups#!forum/angular). (Please do not ask support questions here on Github.)\n\n\nFor Contributors\n----------------\nSee DEVELOPER.md\n",
+    "licenseText": "The MIT License\n\nCopyright (c) 2010-2017 Google, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/protractor/-/protractor-5.1.2.tgz#9b221741709a4c62d5cd53c6aadd54a71137e95f",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/protractor/-/protractor-5.1.2.tgz",
+    "hash": "9b221741709a4c62d5cd53c6aadd54a71137e95f",
+    "registry": "npm",
+    "packageName": "protractor"
+  },
+  "registry": "npm",
+  "hash": "9b221741709a4c62d5cd53c6aadd54a71137e95f"
+}

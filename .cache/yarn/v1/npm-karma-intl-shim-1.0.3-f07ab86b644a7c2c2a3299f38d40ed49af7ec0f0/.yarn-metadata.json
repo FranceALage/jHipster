@@ -1,0 +1,41 @@
+{
+  "manifest": {
+    "name": "karma-intl-shim",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/walmartlabs/karma-intl-shim"
+    },
+    "version": "1.0.3",
+    "description": "Provides a shim for Intl for PhantomJS",
+    "main": "index.js",
+    "author": {
+      "name": "Chase Adams"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "intl": "^1.0.1"
+    },
+    "scripts": {
+      "prepublish": "webpack src/shim.js lib/shim.js --optimize-minimize"
+    },
+    "devDependencies": {
+      "webpack": "^1.12.2"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-karma-intl-shim-1.0.3-f07ab86b644a7c2c2a3299f38d40ed49af7ec0f0/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# karma-intl-shim\n\n> A Karma shim for the `Intl` for internationalization\n\n## Installation\n\n```\nnpm install karma-intl-shim --save-dev\n```\n\n## Usage \n\nIn your `karma.conf.js` file, add `intl-shim` to the `frameworks` in your `config.set`:\n\n```\nconfig.set({\n  frameworks: [\"intl-shim\"],\n```\n\nYou may need to also require it in your `plugins` array:\n\n```\nplugins: [\n  require(\"karma-intl-shim\")\n  ]\n```\n\nNow when running `karma`, you should not get an error that `Intl` cannot be found.\n\n## Issues\n\nThis shim simply attaches the `Intl` library to the window so it's available for testing. \n\nIf you have issues, it's most likely an issue with [`anyearnshaw/Intl.js`](https://github.com/andyearnshaw/Intl.js), issues for the Intl project can be reported [here](https://github.com/andyearnshaw/Intl.js/issues).\n\n## Contributing\n\nPlease create a new issue if you find that you have an issue unrelated to `Intl` under [karma-intl-shim](https://github.com/chaseadamsio/karma-intl-shim/issues/new).\n\nPlease submit a PR if you have made a modification. PRs will be reviewed within a 72 hour week day period of the initial PR.\n\n### Why is it webpacked?\n\nThis project is built with webpack because the `shim.js` is injected into the browser, which we all know doesn't have a \"require\" and this is an easy way to do that.\n",
+    "licenseText": "The MIT License (MIT)\n\nCopyright (c) 2015 Formidable Labs\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/karma-intl-shim/-/karma-intl-shim-1.0.3.tgz#f07ab86b644a7c2c2a3299f38d40ed49af7ec0f0",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/karma-intl-shim/-/karma-intl-shim-1.0.3.tgz",
+    "hash": "f07ab86b644a7c2c2a3299f38d40ed49af7ec0f0",
+    "registry": "npm",
+    "packageName": "karma-intl-shim"
+  },
+  "registry": "npm",
+  "hash": "f07ab86b644a7c2c2a3299f38d40ed49af7ec0f0"
+}

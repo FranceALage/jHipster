@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "name": "@angular/router",
+    "version": "4.3.2",
+    "description": "Angular - the routing library",
+    "main": "./bundles/router.umd.js",
+    "module": "./@angular/router.es5.js",
+    "es2015": "./@angular/router.js",
+    "typings": "./router.d.ts",
+    "keywords": [
+      "angular",
+      "router"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/angular/angular.git"
+    },
+    "author": {
+      "name": "angular"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/angular/angular/issues"
+    },
+    "homepage": "https://github.com/angular/angular/tree/master/packages/router",
+    "dependencies": {
+      "tslib": "^1.7.1"
+    },
+    "peerDependencies": {
+      "@angular/core": "4.3.2",
+      "@angular/common": "4.3.2",
+      "@angular/platform-browser": "4.3.2",
+      "rxjs": "^5.0.1"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@angular/router-4.3.2-71edc8fe7fe4638a66d1554d5785451dcad24284/package.json",
+    "readmeFilename": "README.md",
+    "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@angular/router/-/router-4.3.2.tgz#71edc8fe7fe4638a66d1554d5785451dcad24284",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@angular/router/-/router-4.3.2.tgz",
+    "hash": "71edc8fe7fe4638a66d1554d5785451dcad24284",
+    "registry": "npm",
+    "packageName": "@angular/router"
+  },
+  "registry": "npm",
+  "hash": "71edc8fe7fe4638a66d1554d5785451dcad24284"
+}

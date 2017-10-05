@@ -1,0 +1,62 @@
+{
+  "manifest": {
+    "name": "core-object",
+    "version": "3.1.5",
+    "description": "A lightweight implementation of OOP Class in JavaScript",
+    "main": "core-object.js",
+    "files": [
+      "core-object.js",
+      "lib/"
+    ],
+    "scripts": {
+      "test": "mocha tests/**/*-test.js",
+      "test:debug": "mocha debug tests/**/*-test.js",
+      "build:browser": "browserify core-object.js -o browser.js",
+      "bench:browser": "browserify benchmarks/index.js -o tmp/bench.js",
+      "bench:node": "node benchmarks/index"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ember-cli/core-object.git"
+    },
+    "author": {
+      "name": "Ember core team and ember cli contributors"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/ember-cli/core-object/issues"
+    },
+    "homepage": "https://github.com/ember-cli/core-object",
+    "devDependencies": {
+      "backbone-metal": "^0.6.2",
+      "benchmark": "^2.1.0",
+      "browserify": "^14.0.0",
+      "klass": "^1.4.0",
+      "mocha": "^3.0.0",
+      "traceur-runtime": "0.0.59",
+      "uberproto": "^1.1.2"
+    },
+    "dependencies": {
+      "chalk": "^2.0.0"
+    },
+    "engines": {
+      "node": ">= 4"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-core-object-3.1.5-fa627b87502adc98045e44678e9a8ec3b9c0d2a9/package.json",
+    "readmeFilename": "README.md",
+    "readme": "### CoreObject\n\n[![Travis CI](https://img.shields.io/travis/ember-cli/core-object/master.svg)](https://travis-ci.org/ember-cli/core-object)\n\nA lightweight implementation of OOP Class in JavaScript. It is currently used in\n[ember-cli](https://github.com/ember-cli/ember-cli).\n",
+    "licenseText": "MIT License\n\nCopyright (c) 2017 Ember core team and ember cli contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/core-object/-/core-object-3.1.5.tgz#fa627b87502adc98045e44678e9a8ec3b9c0d2a9",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/core-object/-/core-object-3.1.5.tgz",
+    "hash": "fa627b87502adc98045e44678e9a8ec3b9c0d2a9",
+    "registry": "npm",
+    "packageName": "core-object"
+  },
+  "registry": "npm",
+  "hash": "fa627b87502adc98045e44678e9a8ec3b9c0d2a9"
+}

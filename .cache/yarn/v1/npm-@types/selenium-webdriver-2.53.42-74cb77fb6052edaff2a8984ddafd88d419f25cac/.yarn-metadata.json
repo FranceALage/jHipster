@@ -1,0 +1,47 @@
+{
+  "manifest": {
+    "name": "@types/selenium-webdriver",
+    "version": "2.53.42",
+    "description": "TypeScript definitions for Selenium WebDriverJS",
+    "license": "MIT",
+    "contributors": [
+      {
+        "name": "Bill Armstrong",
+        "url": "https://github.com/BillArmstrong"
+      },
+      {
+        "name": "Yuki Kokubun",
+        "url": "https://github.com/Kuniwak"
+      },
+      {
+        "name": "Craig Nishina",
+        "url": "https://github.com/cnishina"
+      }
+    ],
+    "main": "",
+    "repository": {
+      "type": "git",
+      "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "peerDependencies": {},
+    "typesPublisherContentHash": "90291f2d0499e824d20917259b981a283efa8d5b7cf100c2d7d9a2b9a1f5c07c",
+    "typeScriptVersion": "2.1",
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@types/selenium-webdriver-2.53.42-74cb77fb6052edaff2a8984ddafd88d419f25cac/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Installation\n> `npm install --save @types/selenium-webdriver`\n\n# Summary\nThis package contains type definitions for Selenium WebDriverJS (https://github.com/SeleniumHQ/selenium/tree/master/javascript/node/selenium-webdriver).\n\n# Details\nFiles were exported from https://www.github.com/DefinitelyTyped/DefinitelyTyped/tree/master/selenium-webdriver/v2\n\nAdditional Details\n * Last updated: Wed, 08 Mar 2017 04:58:10 GMT\n * Dependencies: none\n * Global values: none\n\n# Credits\nThese definitions were written by Bill Armstrong <https://github.com/BillArmstrong>, Yuki Kokubun <https://github.com/Kuniwak>, Craig Nishina <https://github.com/cnishina>.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@types/selenium-webdriver/-/selenium-webdriver-2.53.42.tgz#74cb77fb6052edaff2a8984ddafd88d419f25cac",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@types/selenium-webdriver/-/selenium-webdriver-2.53.42.tgz",
+    "hash": "74cb77fb6052edaff2a8984ddafd88d419f25cac",
+    "registry": "npm",
+    "packageName": "@types/selenium-webdriver"
+  },
+  "registry": "npm",
+  "hash": "74cb77fb6052edaff2a8984ddafd88d419f25cac"
+}

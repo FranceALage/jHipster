@@ -1,0 +1,42 @@
+{
+  "manifest": {
+    "name": "@angular/forms",
+    "version": "4.3.2",
+    "description": "Angular - directives and services for creating forms",
+    "main": "./bundles/forms.umd.js",
+    "module": "./@angular/forms.es5.js",
+    "es2015": "./@angular/forms.js",
+    "typings": "./forms.d.ts",
+    "author": {
+      "name": "angular"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "tslib": "^1.7.1"
+    },
+    "peerDependencies": {
+      "@angular/core": "4.3.2",
+      "@angular/common": "4.3.2",
+      "@angular/platform-browser": "4.3.2"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angular/angular.git"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@angular/forms-4.3.2-6e7c363ed994927dcefd1a191899cdb7be02cec6/package.json",
+    "readmeFilename": "README.md",
+    "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@angular/forms/-/forms-4.3.2.tgz#6e7c363ed994927dcefd1a191899cdb7be02cec6",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@angular/forms/-/forms-4.3.2.tgz",
+    "hash": "6e7c363ed994927dcefd1a191899cdb7be02cec6",
+    "registry": "npm",
+    "packageName": "@angular/forms"
+  },
+  "registry": "npm",
+  "hash": "6e7c363ed994927dcefd1a191899cdb7be02cec6"
+}

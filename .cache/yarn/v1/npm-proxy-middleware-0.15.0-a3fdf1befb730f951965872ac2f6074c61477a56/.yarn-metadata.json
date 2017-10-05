@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "name": "proxy-middleware",
+    "version": "0.15.0",
+    "description": "http(s) proxy as connect middleware",
+    "main": "index.js",
+    "scripts": {
+      "test": "mocha"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/andrewrk/connect-proxy"
+    },
+    "keywords": [
+      "connect",
+      "proxy",
+      "middleware",
+      "https",
+      "http",
+      "ssl"
+    ],
+    "author": {
+      "name": "Andrew Kelley"
+    },
+    "license": "MIT",
+    "engines": {
+      "node": ">=0.8.0"
+    },
+    "devDependencies": {
+      "connect": "~3.3.5",
+      "mocha": "~2.2.5",
+      "serve-static": "~1.9.3"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-proxy-middleware-0.15.0-a3fdf1befb730f951965872ac2f6074c61477a56/package.json",
+    "readmeFilename": "README.md",
+    "readme": "[![Build Status](https://secure.travis-ci.org/andrewrk/node-proxy-middleware.png)](http://travis-ci.org/andrewrk/node-proxy-middleware)\n\n### Usage:\n\n```js\nvar connect = require('connect');\nvar url = require('url');\nvar proxy = require('proxy-middleware');\n\nvar app = connect();\napp.use('/api', proxy(url.parse('https://example.com/endpoint')));\n// now requests to '/api/x/y/z' are proxied to 'https://example.com/endpoint/x/y/z'\n\n//same as example above but also uses a short hand string only parameter\napp.use('/api-string-only', proxy('https://example.com/endpoint'));\n```\n\n### Documentation:\n\n`proxyMiddleware(options)`\n\n`options` allows any options that are permitted on the [`http`](http://nodejs.org/api/http.html#http_http_request_options_callback) or [`https`](http://nodejs.org/api/https.html#https_https_request_options_callback) request options.\n\nOther options:\n- `route`: you can pass the route for connect middleware within the options, as well.\n- `via`: by default no [via header](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.45) is added. If you pass `true` for this option the local hostname will be used for the via header. You can also pass a string for this option in which case that will be used for the via header.\n- `cookieRewrite`: this option can be used to support cookies via the proxy by rewriting the cookie domain to that of the proxy server. By default cookie domains are not rewritten. The `cookieRewrite` option works as the `via` option - if you pass `true` the local hostname will be used, and if you pass a string that will be used as the rewritten cookie domain.\n- `preserveHost`: When enabled, this option will pass the Host: line from the incoming request to the proxied host. Default: `false`.\n\n### Usage with route:\n\n```js\nvar proxyOptions = url.parse('https://example.com/endpoint');\nproxyOptions.route = '/api';\n\nvar middleWares = [proxy(proxyOptions) /*, ...*/];\n\n// Grunt connect uses this method\nconnect(middleWares);\n```\n",
+    "licenseText": "The MIT License (Expat)\n\nCopyright (c) 2014 Andrew Kelley\n\nPermission is hereby granted, free of charge, to any person\nobtaining a copy of this software and associated documentation files\n(the \"Software\"), to deal in the Software without restriction,\nincluding without limitation the rights to use, copy, modify, merge,\npublish, distribute, sublicense, and/or sell copies of the Software,\nand to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS\nBE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN\nACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/proxy-middleware/-/proxy-middleware-0.15.0.tgz#a3fdf1befb730f951965872ac2f6074c61477a56",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/proxy-middleware/-/proxy-middleware-0.15.0.tgz",
+    "hash": "a3fdf1befb730f951965872ac2f6074c61477a56",
+    "registry": "npm",
+    "packageName": "proxy-middleware"
+  },
+  "registry": "npm",
+  "hash": "a3fdf1befb730f951965872ac2f6074c61477a56"
+}

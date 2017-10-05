@@ -1,0 +1,69 @@
+{
+  "manifest": {
+    "name": "postcss-url",
+    "version": "5.1.2",
+    "description": "PostCSS plugin to rebase or inline on url().",
+    "keywords": [
+      "css",
+      "postcss",
+      "postcss-plugin",
+      "url",
+      "rebase",
+      "inline",
+      "base64",
+      "assets"
+    ],
+    "author": {
+      "name": "Maxime Thirouin"
+    },
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/postcss/postcss-url.git"
+    },
+    "files": [
+      "index.js"
+    ],
+    "dependencies": {
+      "directory-encoder": "^0.7.2",
+      "js-base64": "^2.1.5",
+      "mime": "^1.2.11",
+      "minimatch": "^3.0.0",
+      "mkdirp": "^0.5.0",
+      "path-is-absolute": "^1.0.0",
+      "postcss": "^5.0.0"
+    },
+    "devDependencies": {
+      "eslint": "^1.10.3",
+      "eslint-config-i-am-meticulous": "^2.0.0",
+      "npmpub": "^3.0.1",
+      "postcss-import": "^7.0.0",
+      "tape": "^4.0.3"
+    },
+    "scripts": {
+      "lint": "eslint --fix .",
+      "tests": "tape test",
+      "test": "npm run lint && npm run tests",
+      "release": "npmpub"
+    },
+    "eslintConfig": {
+      "extends": "eslint-config-i-am-meticulous/es5"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-postcss-url-5.1.2-98b3165be8d592471cb0caadde2c0d1f832f133e/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# postcss-url\n\n[![Travis Build Status](https://img.shields.io/travis/postcss/postcss-url/master.svg?label=unix%20build)](https://travis-ci.org/postcss/postcss-url)\n[![AppVeyor Build Status](https://img.shields.io/appveyor/ci/MoOx/postcss-url/master.svg?label=windows%20build)](https://ci.appveyor.com/project/MoOx/postcss-url)\n\n> [PostCSS](https://github.com/postcss/postcss) plugin to rebase, inline or copy on url().\n\n## Installation\n\n```console\n$ npm install postcss-url\n```\n\n## Usage\n\n```js\n// dependencies\nvar fs = require(\"fs\")\nvar postcss = require(\"postcss\")\nvar url = require(\"postcss-url\")\n\n// css to be processed\nvar css = fs.readFileSync(\"input.css\", \"utf8\")\n\n// process css\nvar output = postcss()\n  .use(url({\n    url: \"rebase\" // or \"inline\" or \"copy\"\n  }))\n  .process(css, {\n    // \"rebase\" mode need at least one of those options\n    // \"inline\" mode might need `from` option only\n    // \"copy\" mode need `from` and `to` option to work\n    from: \"src/stylesheet/index.css\",\n    to: \"dist/index.css\"\n  })\n  .css\n```\n\nCheckout [tests](test) for examples.\n\n### Options\n\n#### `url`\n\n_(default: `\"rebase\"`)_\n\n##### `url: \"rebase\"`\n\nAllow you to fix `url()` according to postcss `to` and/or `from` options (rebase to `to` first if available, otherwise `from` or `process.cwd()`).\n\n##### `url: \"inline\"`\n\nAllow you to inline assets using base64 encoding. Can use postcss `from` option to find ressources.\n\n##### `url: \"copy\"`\n\nAllow you to copy and rebase assets according to postcss `to`, `assetsPath` and `from` options (`assetsPath` is relative to the option `to`).\n\n##### `url: {Function}`\n\nCustom transform function. Takes following arguments:\n* `URL` – original url\n* `decl` - related postcss declaration object\n* `from` - from postcss option\n* `dirname` – dirname of processing file\n* `to` – from postcss option\n* `options` – plugin options\n* `result` – postcss result object\n\nAnd should return the transformed url.\nYou can use this option to adjust urls for CDN.\n\n#### `maxSize`\n_(default: `14`)_\n\nSpecify the maximum file size to inline (in kbytes)\n\n#### `filter`\n\nA regular expression e.g. `/\\.svg$/`, a [minimatch string](https://github.com/isaacs/minimatch) e.g. `'**/*.svg'` or a custom filter function to determine wether a file should be inlined.\n\n#### `fallback`\n\nThe url fallback method to use if max size is exceeded or url contains a hash.\nCustom transform functions are supported.\n\n#### `basePath`\n\nSpecify the base path where to search images from\n\n#### `assetsPath`\n\n_(default: `false`)_\n\nIf you specify an `assetsPath`, the assets files will be copied in that\ndestination\n\n#### `useHash`\n\n_(default: `false`)_\n\nIf set to `true` the copy method is going to rename the path of the files by a hash name\n\n---\n\n## Contributing\n\nWork on a branch, install dev-dependencies, respect coding style & run tests before submitting a bug fix or a feature.\n\n```console\n$ git clone https://github.com/postcss/postcss-url.git\n$ git checkout -b patch-1\n$ npm install\n$ npm test\n```\n\n## [Changelog](CHANGELOG.md)\n\n## [License](LICENSE)\n",
+    "licenseText": "The MIT License (MIT)\n\nCopyright (c) 2014 Maxime Thirouin\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\nthe Software, and to permit persons to whom the Software is furnished to do so,\nsubject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/postcss-url/-/postcss-url-5.1.2.tgz#98b3165be8d592471cb0caadde2c0d1f832f133e",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/postcss-url/-/postcss-url-5.1.2.tgz",
+    "hash": "98b3165be8d592471cb0caadde2c0d1f832f133e",
+    "registry": "npm",
+    "packageName": "postcss-url"
+  },
+  "registry": "npm",
+  "hash": "98b3165be8d592471cb0caadde2c0d1f832f133e"
+}

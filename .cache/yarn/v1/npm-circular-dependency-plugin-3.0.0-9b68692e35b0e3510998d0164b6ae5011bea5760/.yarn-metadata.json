@@ -1,0 +1,44 @@
+{
+  "manifest": {
+    "name": "circular-dependency-plugin",
+    "main": "index.js",
+    "devDependencies": {
+      "memory-fs": "^0.3.0",
+      "mocha": "^2.3.4",
+      "sinon": "^1.17.2",
+      "webpack": "^1.12.9"
+    },
+    "description": "Detect modules with circular dependencies when bundling with webpack.",
+    "version": "3.0.0",
+    "dependencies": {},
+    "scripts": {
+      "test": "mocha __tests__"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/aackerman/circular-dependency-plugin.git"
+    },
+    "author": {},
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/aackerman/circular-dependency-plugin/issues"
+    },
+    "homepage": "https://github.com/aackerman/circular-dependency-plugin#readme",
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-circular-dependency-plugin-3.0.0-9b68692e35b0e3510998d0164b6ae5011bea5760/package.json",
+    "readmeFilename": "README.md",
+    "readme": "## Circular Dependency Plugin\n\nDetect modules with circular dependencies when bundling with webpack.\n\nCircular dependencies are often a necessity in complex software, the presence of a circular dependency doesn't always imply a bug, but in the case where the you believe a bug exists, this module may help find it.\n\n### Usage\n\n```js\n// webpack.config.js\nlet CircularDependencyPlugin = require('circular-dependency-plugin')\n\nmodule.exports = {\n  entry: \"./src/index\",\n  plugins: [\n    new CircularDependencyPlugin({\n      // exclude detection of files based on a RegExp\n      exclude: /a\\.js|node_modules/,\n      // add errors to webpack instead of warnings\n      failOnError: true\n    })\n  ]\n}\n```\n",
+    "licenseText": "Copyright (c) 2016, Aaron Ackerman <theron17@gmail.com>\n\nPermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/circular-dependency-plugin/-/circular-dependency-plugin-3.0.0.tgz#9b68692e35b0e3510998d0164b6ae5011bea5760",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/circular-dependency-plugin/-/circular-dependency-plugin-3.0.0.tgz",
+    "hash": "9b68692e35b0e3510998d0164b6ae5011bea5760",
+    "registry": "npm",
+    "packageName": "circular-dependency-plugin"
+  },
+  "registry": "npm",
+  "hash": "9b68692e35b0e3510998d0164b6ae5011bea5760"
+}

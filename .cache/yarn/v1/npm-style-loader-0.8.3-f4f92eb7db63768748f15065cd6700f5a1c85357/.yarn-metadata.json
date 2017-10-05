@@ -1,0 +1,42 @@
+{
+  "manifest": {
+    "name": "style-loader",
+    "version": "0.8.3",
+    "author": {
+      "name": "Tobias Koppers @sokra"
+    },
+    "description": "style loader module for webpack",
+    "devDependencies": {
+      "css-loader": "~0.8.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:webpack/style-loader.git"
+    },
+    "licenses": [
+      {
+        "type": "MIT",
+        "url": "http://www.opensource.org/licenses/mit-license.php"
+      }
+    ],
+    "dependencies": {
+      "loader-utils": "^0.2.5"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-style-loader-0.8.3-f4f92eb7db63768748f15065cd6700f5a1c85357/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# style loader for webpack\n\n## Usage\n\n[Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)\n\n### Simple API\n\n``` javascript\nrequire(\"style!raw!./file.css\");\n// => add rules in file.css to document\n```\n\nIt's recommended to combine it with the [`css-loader`](https://github.com/webpack/css-loader): `require(\"style!css!./file.css\")`.\n\nIt also possible to add a URL instead of a css string:\n\n``` javascript\nrequire(\"style/url!file!./file.css\");\n// => add a <link rel=\"stylesheet\"> to file.css to document\n```\n\n### Reference-counted API\n\n``` javascript\nvar style = require(\"style/useable!css!./file.css\");\nstyle.use(); // = style.ref();\nstyle.unuse(); // = style.unref();\n```\n\nStyles are not added on require, but instead on call to `use`/`ref`. Styles are removed from page if `unuse`/`unref` is called exactly as often as `use`/`ref`.\n\nNote: Behavior is undefined when `unuse`/`unref` is called more often than `use`/`ref`. Don't do that.\n\n### Options\n\n#### `singleton`\n\nIf defined, the style-loader will re-use a single `<style>` element, instead of adding/removing individual elements for each required module. **Note:** this option is on by default in IE9, which has strict limitations on the # of style tags allowed on a page. You can enable or disable it with the singleton query parameter (`?singleton` or `?-singleton`).\n\n## Recommended configuration\n\nBy convention the reference-counted API should be bound to `.useable.css` and the simple API to `.css` (similar to other file types, i. e. `.useable.less` and `.less`).\n\nSo the recommended configuration for webpack is:\n\n``` javascript\n{\n  module: {\n    loaders: [\n      { test: /\\.css$/, exclude: /\\.useable\\.css$/, loader: \"style!css\" },\n      { test: /\\.useable\\.css$/, loader: \"style/useable!css\" }\n    ]\n  }\n}\n```\n\n## License\n\nMIT (http://www.opensource.org/licenses/mit-license.php)\n",
+    "license": "MIT"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/style-loader/-/style-loader-0.8.3.tgz#f4f92eb7db63768748f15065cd6700f5a1c85357",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/style-loader/-/style-loader-0.8.3.tgz",
+    "hash": "f4f92eb7db63768748f15065cd6700f5a1c85357",
+    "registry": "npm",
+    "packageName": "style-loader"
+  },
+  "registry": "npm",
+  "hash": "f4f92eb7db63768748f15065cd6700f5a1c85357"
+}

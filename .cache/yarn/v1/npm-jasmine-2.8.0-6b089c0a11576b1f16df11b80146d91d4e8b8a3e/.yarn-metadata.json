@@ -1,0 +1,52 @@
+{
+  "manifest": {
+    "name": "jasmine",
+    "description": "Command line jasmine",
+    "homepage": "http://jasmine.github.io/",
+    "keywords": [
+      "test",
+      "jasmine",
+      "tdd",
+      "bdd"
+    ],
+    "license": "MIT",
+    "version": "2.8.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jasmine/jasmine-npm"
+    },
+    "scripts": {
+      "test": "./node_modules/.bin/grunt && ./bin/jasmine.js"
+    },
+    "dependencies": {
+      "exit": "^0.1.2",
+      "glob": "^7.0.6",
+      "jasmine-core": "~2.8.0"
+    },
+    "bin": {
+      "jasmine": "./bin/jasmine.js"
+    },
+    "main": "./lib/jasmine.js",
+    "devDependencies": {
+      "grunt": "^0.4.2",
+      "grunt-cli": "^0.1.13",
+      "grunt-contrib-jshint": "^0.11.0",
+      "shelljs": "^0.3.0"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-jasmine-2.8.0-6b089c0a11576b1f16df11b80146d91d4e8b8a3e/package.json",
+    "readmeFilename": "README.md",
+    "readme": "[![Build Status](https://travis-ci.org/jasmine/jasmine-npm.png?branch=master)](https://travis-ci.org/jasmine/jasmine-npm)\n\n# The Jasmine Module\n\nThe `jasmine` module is a package of helper code for developing Jasmine projects for Node.js. \n\nThe core of jasmine lives at https://github.com/jasmine/jasmine and is `jasmine-core` in npm.\n\n## Contents\n\nThis module allows you to run Jasmine specs for your Node.js code. The output will be displayed in your terminal by default.\n\n## Documentation\n\nhttp://jasmine.github.io/2.5/node.html\n\n## Installation\n```sh\n# Local installation:\nnpm install --save-dev jasmine\n\n# Global installation\nnpm install -g jasmine\n```\n\n## Initializing\n\nTo initialize a project for Jasmine\n\n`jasmine init`\n\nTo seed your project with some examples\n\n`jasmine examples`\n\n## Usage\n\nTo run your test suite\n\n`jasmine`\n\n## Configuration\n\nCustomize `spec/support/jasmine.json` to enumerate the source and spec files you would like the Jasmine runner to include.\nYou may use dir glob strings.\nMore information on the format of `jasmine.json` can be found in [the documentation](http://jasmine.github.io/2.4/node.html#section-Configuration)\n\nAlternatively, you may specify the path to your `jasmine.json` by setting an environment variable or an option:\n\n```shell\njasmine JASMINE_CONFIG_PATH=relative/path/to/your/jasmine.json\njasmine --config=relative/path/to/your/jasmine.json\n```\n\n## Support\n\nDocumentation: [jasmine.github.io](https://jasmine.github.io)\nJasmine Mailing list: [jasmine-js@googlegroups.com](mailto:jasmine-js@googlegroups.com)\nTwitter: [@jasminebdd](http://twitter.com/jasminebdd)\n\nPlease file issues here at Github\n\nCopyright (c) 2008-2017 Pivotal Labs. This software is licensed under the MIT License.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/jasmine/-/jasmine-2.8.0.tgz#6b089c0a11576b1f16df11b80146d91d4e8b8a3e",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/jasmine/-/jasmine-2.8.0.tgz",
+    "hash": "6b089c0a11576b1f16df11b80146d91d4e8b8a3e",
+    "registry": "npm",
+    "packageName": "jasmine"
+  },
+  "registry": "npm",
+  "hash": "6b089c0a11576b1f16df11b80146d91d4e8b8a3e"
+}

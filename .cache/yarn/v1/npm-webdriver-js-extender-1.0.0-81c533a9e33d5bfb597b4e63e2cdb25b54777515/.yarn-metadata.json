@@ -1,0 +1,62 @@
+{
+  "manifest": {
+    "name": "webdriver-js-extender",
+    "version": "1.0.0",
+    "description": "A plugin which adds additional commands to selenium's javascript implementation of the webdriver client side API",
+    "scripts": {
+      "prepublish": "gulp prepublish",
+      "test": "gulp test"
+    },
+    "keywords": [
+      "testing",
+      "webdriver",
+      "webdriverjs",
+      "selenium",
+      "appium"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/angular/webdriver-js-entender.git"
+    },
+    "main": "built/lib/index.js",
+    "author": {
+      "name": "Sammy Jelin",
+      "email": "sjelin@gmail.com"
+    },
+    "license": "MIT",
+    "typings": "built/lib/index.d.ts",
+    "dependencies": {
+      "@types/selenium-webdriver": "^2.53.35",
+      "selenium-webdriver": "^2.53.2"
+    },
+    "devDependencies": {
+      "@types/es6-promise": "0.0.32",
+      "@types/jasmine": "^2.5.37",
+      "@types/node": "^6.0.46",
+      "clang-format": "^1.0.42",
+      "gulp": "^3.9.1",
+      "gulp-clang-format": "^1.0.23",
+      "jasmine": "^2.4.1",
+      "portfinder": "^1.0.10",
+      "run-sequence": "^1.2.2",
+      "selenium-mock": "^0.1.5",
+      "typescript": "^2.0.0"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-webdriver-js-extender-1.0.0-81c533a9e33d5bfb597b4e63e2cdb25b54777515/package.json",
+    "readmeFilename": "README.md",
+    "readme": "WebDriver JS Extender\n=====================\n\nThis tools extends [Selenium's javascript implementation](\nhttps://www.npmjs.com/package/selenium-webdriver) of the WebDriver API\nto include additional commands (e.g. commands required for [appium](\nhttps://github.com/appium/appium)).\n\nCurrently, few commands are implemented.  But the groundwork has been laid,\nfuture commands should be easy to add, and PRs are very welcome!  See\n[CONTRIBUTING.md](CONTRIBUTING.md) for details.\n\nUsage\n-----\n\nIf you are using a versoin of `selenium-webdriver` below `3.0.0-beta-1`, you\nmust use the `patch()` function before you create your webdriver instance:\n\n```js\nrequire('webdriver-js-extender').patch(\n    require('selenium-webdriver/lib/command'),\n    require('selenium-webdriver/executors'),\n    require('selenium-webdriver/http'));\n```\n\nOnce you've patched `selenium-webdriver` (or if you're using version `3.x`), all\nyou need to do is run the `extend` function on your webdriver instance:\n\n```js\n  var extendedWebdriver = require('webdriver-js-extender').extend(webdriver);\n\n  extendedWebdriver.setNetworkConnection(5);\n```\n",
+    "licenseText": "The MIT License\n\nCopyright (c) 2016 Google, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/webdriver-js-extender/-/webdriver-js-extender-1.0.0.tgz#81c533a9e33d5bfb597b4e63e2cdb25b54777515",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/webdriver-js-extender/-/webdriver-js-extender-1.0.0.tgz",
+    "hash": "81c533a9e33d5bfb597b4e63e2cdb25b54777515",
+    "registry": "npm",
+    "packageName": "webdriver-js-extender"
+  },
+  "registry": "npm",
+  "hash": "81c533a9e33d5bfb597b4e63e2cdb25b54777515"
+}

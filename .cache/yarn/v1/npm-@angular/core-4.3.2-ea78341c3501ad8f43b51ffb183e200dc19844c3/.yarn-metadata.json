@@ -1,0 +1,41 @@
+{
+  "manifest": {
+    "name": "@angular/core",
+    "version": "4.3.2",
+    "description": "Angular - the core framework",
+    "main": "./bundles/core.umd.js",
+    "module": "./@angular/core.es5.js",
+    "es2015": "./@angular/core.js",
+    "typings": "./core.d.ts",
+    "author": {
+      "name": "angular"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "tslib": "^1.7.1"
+    },
+    "peerDependencies": {
+      "rxjs": "^5.0.1",
+      "zone.js": "^0.8.4"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angular/angular.git"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@angular/core-4.3.2-ea78341c3501ad8f43b51ffb183e200dc19844c3/package.json",
+    "readmeFilename": "README.md",
+    "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@angular/core/-/core-4.3.2.tgz#ea78341c3501ad8f43b51ffb183e200dc19844c3",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@angular/core/-/core-4.3.2.tgz",
+    "hash": "ea78341c3501ad8f43b51ffb183e200dc19844c3",
+    "registry": "npm",
+    "packageName": "@angular/core"
+  },
+  "registry": "npm",
+  "hash": "ea78341c3501ad8f43b51ffb183e200dc19844c3"
+}

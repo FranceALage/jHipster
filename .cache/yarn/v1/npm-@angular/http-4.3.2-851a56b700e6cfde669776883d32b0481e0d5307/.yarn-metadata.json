@@ -1,0 +1,42 @@
+{
+  "manifest": {
+    "name": "@angular/http",
+    "version": "4.3.2",
+    "description": "Angular - the http service",
+    "main": "./bundles/http.umd.js",
+    "module": "./@angular/http.es5.js",
+    "es2015": "./@angular/http.js",
+    "typings": "./http.d.ts",
+    "author": {
+      "name": "angular"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "tslib": "^1.7.1"
+    },
+    "peerDependencies": {
+      "rxjs": "^5.0.1",
+      "@angular/core": "4.3.2",
+      "@angular/platform-browser": "4.3.2"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angular/angular.git"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@angular/http-4.3.2-851a56b700e6cfde669776883d32b0481e0d5307/package.json",
+    "readmeFilename": "README.md",
+    "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@angular/http/-/http-4.3.2.tgz#851a56b700e6cfde669776883d32b0481e0d5307",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@angular/http/-/http-4.3.2.tgz",
+    "hash": "851a56b700e6cfde669776883d32b0481e0d5307",
+    "registry": "npm",
+    "packageName": "@angular/http"
+  },
+  "registry": "npm",
+  "hash": "851a56b700e6cfde669776883d32b0481e0d5307"
+}

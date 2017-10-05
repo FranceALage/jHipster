@@ -1,0 +1,69 @@
+{
+  "manifest": {
+    "name": "tslint-loader",
+    "version": "3.5.3",
+    "description": "tslint loader for webpack",
+    "main": "index.js",
+    "scripts": {
+      "deploy": "np --skip-cleanup",
+      "lint": "eslint --ext .js .",
+      "mocha": "mocha ./test/loader.spec.js --timeout 5000",
+      "test": "npm run mocha && npm run lint"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/wbuchwalter/tslint-loader"
+    },
+    "keywords": [
+      "tslint",
+      "typescript",
+      "webpack",
+      "loader",
+      "linting"
+    ],
+    "author": {
+      "name": "William Buchwalter"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/wbuchwalter/tslint-loader/issues"
+    },
+    "homepage": "https://github.com/wbuchwalter/tslint-loader",
+    "peerDependencies": {
+      "tslint": ">=4.0.0"
+    },
+    "dependencies": {
+      "loader-utils": "^1.0.2",
+      "mkdirp": "^0.5.1",
+      "object-assign": "^4.1.1",
+      "rimraf": "^2.4.4",
+      "semver": "^5.3.0"
+    },
+    "devDependencies": {
+      "awesome-typescript-loader": "^3.0.3",
+      "chai": "^3.5.0",
+      "es6-promisify": "^5.0.0",
+      "eslint": "^3.15.0",
+      "mocha": "^3.2.0",
+      "np": "^2.12.0",
+      "tslint": "^4.4.2",
+      "typescript": "^2.1.6",
+      "webpack": "^2.2.1"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-tslint-loader-3.5.3-343f74122d94f356b689457d3f59f64a69ab606f/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# tslint-loader\n[![Build Status](https://travis-ci.org/wbuchwalter/tslint-loader.svg?branch=master)](https://travis-ci.org/wbuchwalter/tslint-loader)\n[![Dependency Status](https://david-dm.org/wbuchwalter/tslint-loader.svg)](https://david-dm.org/wbuchwalter/tslint-loader)\n[![devDependency Status](https://david-dm.org/wbuchwalter/tslint-loader/dev-status.svg)](https://david-dm.org/wbuchwalter/tslint-loader?type=dev)\n[![peerDependency Status](https://david-dm.org/wbuchwalter/tslint-loader/peer-status.svg)](https://david-dm.org/wbuchwalter/tslint-loader?type=peer)\n\nTslint loader for Webpack.\n\n## Installation\n\n``` shell\nnpm install tslint tslint-loader --save-dev\n```\n\nThe package depends on Tslint 4.0+, no longer works with 3.* versions.\n\n## Usage\n\nApply the tslint loader as preLoader in your webpack configuration.\n\n### Webpack 2\n\n```javascript\nmodule.exports = {\n    module: {\n        rules: [\n            {\n                test: /\\.ts$/,\n                enforce: 'pre',\n                loader: 'tslint-loader',\n                options: { /* Loader options go here */ }\n            }\n        ]\n    }\n}\n```\n\n### Webpack 1\n\n```javascript\nmodule.exports = {\n    module: {\n        preLoaders: [\n            {\n                test: /\\.ts$/,\n                loader: 'tslint-loader'\n            }\n        ]\n    },\n\n    tslint: { /* Loader options go here */ }\n}\n```\n\n### Loader options\n\n```javascript\n{\n    configuration: {\n        rules: {\n            quotemark: [true, 'double']\n        }\n    },\n    \n    // can specify a custom config file relative to current directory or with absolute path\n    // 'tslint-custom.json'\n    configFile: false,\n    \n    // tslint errors are displayed by default as warnings\n    // set emitErrors to true to display them as errors\n    emitErrors: false,\n    \n    // tslint does not interrupt the compilation by default\n    // if you want any file with tslint errors to fail\n    // set failOnHint to true\n    failOnHint: true,\n    \n    // enables type checked rules like 'for-in-array'\n    // uses tsconfig.json from current working directory\n    typeCheck: false,\n    \n    // automatically fix linting errors\n    fix: false,\n    \n    // can specify a custom tsconfig file relative to current directory or with absolute path\n    // to be used with type checked rules\n    tsConfigFile: 'tsconfig.json',\n    \n    // name of your formatter (optional)\n    formatter: 'yourformatter',\n    \n    // path to directory containing formatter (optional)\n    formattersDirectory: 'node_modules/tslint-loader/formatters/',\n    \n    // These options are useful if you want to save output to files\n    // for your continuous integration server\n    fileOutput: {\n        // The directory where each file's report is saved\n        dir: './foo/',\n    \n        // The extension to use for each report's filename. Defaults to 'txt'\n        ext: 'xml',\n    \n        // If true, all files are removed from the report directory at the beginning of run\n        clean: true,\n    \n        // A string to include at the top of every report file.\n        // Useful for some report formats.\n        header: '<?xml version=\"1.0\" encoding=\"utf-8\"?>\\n<checkstyle version=\"5.7\">',\n    \n        // A string to include at the bottom of every report file.\n        // Useful for some report formats.\n        footer: '</checkstyle>'\n    }\n}\n```\n\n## License\n\n[MIT](http://www.opensource.org/licenses/mit-license.php)\n\n\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/tslint-loader/-/tslint-loader-3.5.3.tgz#343f74122d94f356b689457d3f59f64a69ab606f",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/tslint-loader/-/tslint-loader-3.5.3.tgz",
+    "hash": "343f74122d94f356b689457d3f59f64a69ab606f",
+    "registry": "npm",
+    "packageName": "tslint-loader"
+  },
+  "registry": "npm",
+  "hash": "343f74122d94f356b689457d3f59f64a69ab606f"
+}
