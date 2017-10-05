@@ -1,0 +1,54 @@
+{
+  "manifest": {
+    "name": "web-app-manifest-loader",
+    "version": "0.1.1",
+    "description": "Web app manifest loader for webpack",
+    "main": "index.js",
+    "scripts": {
+      "test": "istanbul cover _mocha test -- --timeout 20000",
+      "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/markdalgleish/web-app-manifest-loader.git"
+    },
+    "author": {
+      "name": "Mark Dalgleish"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/markdalgleish/web-app-manifest-loader/issues"
+    },
+    "homepage": "https://github.com/markdalgleish/web-app-manifest-loader#readme",
+    "dependencies": {
+      "loader-utils": "^0.2.12",
+      "steed": "^1.1.2"
+    },
+    "devDependencies": {
+      "chai": "^3.4.1",
+      "coveralls": "^2.11.6",
+      "file-loader": "^0.8.5",
+      "glob": "^6.0.1",
+      "istanbul": "^0.4.1",
+      "mocha": "^2.3.4",
+      "rimraf": "^2.4.5",
+      "webpack": "^1.12.9"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-web-app-manifest-loader-0.1.1-861186a70f37b69ee10496b7ed0353d56fbdd11a/package.json",
+    "readmeFilename": "README.md",
+    "readme": "[![Build Status](https://img.shields.io/travis/markdalgleish/web-app-manifest-loader/master.svg?style=flat-square)](http://travis-ci.org/markdalgleish/web-app-manifest-loader) [![Coverage Status](https://img.shields.io/coveralls/markdalgleish/web-app-manifest-loader/master.svg?style=flat-square)](https://coveralls.io/r/markdalgleish/web-app-manifest-loader) [![npm](https://img.shields.io/npm/v/web-app-manifest-loader.svg?style=flat-square)](https://www.npmjs.com/package/web-app-manifest-loader)\n\n# web-app-manifest-loader\n\nLoad images referenced in the `icons` and `splash_screens` fields in your [Web App Manifest](http://www.w3.org/TR/appmanifest/) using [webpack](https://github.com/webpack/webpack).\n\n```bash\n$ npm install --save-dev web-app-manifest-loader\n```\n\n## Usage\n\n[Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)\n\nIn your webpack config:\n\n```js\nmodule: {\n  loaders: [\n    {\n      test: /manifest.json$/,\n      loader: 'file-loader?name=manifest.json!web-app-manifest-loader'\n    }\n  ]\n}\n```\n\nNote that this example also uses [file-loader](https://github.com/webpack/file-loader).\n\nThen, require the manifest in your application code:\n\n```js\nrequire('./manifest.json');\n```\n\nThis allows you to provide image paths in the standard webpack format inside your manifest:\n\n```js\n{\n  \"name\": \"Hello World\",\n  ...\n  \"splash_screens\": [\n    {\n      \"src\": \"./images/splash-hi.png\",\n      \"sizes\": \"2560x1440\",\n      \"type\": \"image/png\"\n    },\n    ...\n  ],\n  \"icons\": [\n    {\n      \"src\": \"./images/icon-hi.png\",\n      \"sizes\": \"512x512\",\n      \"type\": \"image/png\"\n    },\n    ...\n  ]\n}\n```\n\n## License\n\n[MIT License](http://markdalgleish.mit-license.org/)\n",
+    "licenseText": "The MIT License (MIT)\n\nCopyright (c) 2015 Mark Dalgleish\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/web-app-manifest-loader/-/web-app-manifest-loader-0.1.1.tgz#861186a70f37b69ee10496b7ed0353d56fbdd11a",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/web-app-manifest-loader/-/web-app-manifest-loader-0.1.1.tgz",
+    "hash": "861186a70f37b69ee10496b7ed0353d56fbdd11a",
+    "registry": "npm",
+    "packageName": "web-app-manifest-loader"
+  },
+  "registry": "npm",
+  "hash": "861186a70f37b69ee10496b7ed0353d56fbdd11a"
+}

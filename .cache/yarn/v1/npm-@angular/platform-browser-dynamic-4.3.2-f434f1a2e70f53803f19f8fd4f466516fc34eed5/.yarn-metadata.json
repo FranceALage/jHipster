@@ -1,0 +1,43 @@
+{
+  "manifest": {
+    "name": "@angular/platform-browser-dynamic",
+    "version": "4.3.2",
+    "description": "Angular - library for using Angular in a web browser with JIT compilation",
+    "main": "./bundles/platform-browser-dynamic.umd.js",
+    "module": "./@angular/platform-browser-dynamic.es5.js",
+    "es2015": "./@angular/platform-browser-dynamic.js",
+    "typings": "./platform-browser-dynamic.d.ts",
+    "author": {
+      "name": "angular"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "tslib": "^1.7.1"
+    },
+    "peerDependencies": {
+      "@angular/core": "4.3.2",
+      "@angular/common": "4.3.2",
+      "@angular/compiler": "4.3.2",
+      "@angular/platform-browser": "4.3.2"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angular/angular.git"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@angular/platform-browser-dynamic-4.3.2-f434f1a2e70f53803f19f8fd4f466516fc34eed5/package.json",
+    "readmeFilename": "README.md",
+    "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-4.3.2.tgz#f434f1a2e70f53803f19f8fd4f466516fc34eed5",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-4.3.2.tgz",
+    "hash": "f434f1a2e70f53803f19f8fd4f466516fc34eed5",
+    "registry": "npm",
+    "packageName": "@angular/platform-browser-dynamic"
+  },
+  "registry": "npm",
+  "hash": "f434f1a2e70f53803f19f8fd4f466516fc34eed5"
+}

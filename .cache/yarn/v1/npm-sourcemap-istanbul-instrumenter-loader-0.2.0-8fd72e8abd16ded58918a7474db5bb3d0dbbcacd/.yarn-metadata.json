@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "name": "sourcemap-istanbul-instrumenter-loader",
+    "version": "0.2.0",
+    "description": "Istanbul instrumenter loader for webpack",
+    "keywords": [
+      "webpack",
+      "loader",
+      "istanbul",
+      "coverage"
+    ],
+    "homepage": "https://github.com/zakhenry/istanbul-instrumenter-loader",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/zakhenry/istanbul-instrumenter-loader.git"
+    },
+    "author": {
+      "name": "Kir Belevich",
+      "email": "kir@soulshine.in",
+      "url": "https://github.com/deepsweet"
+    },
+    "main": "index.js",
+    "files": [
+      "index.js"
+    ],
+    "dependencies": {
+      "istanbul": "0.x.x",
+      "loader-utils": "0.x.x",
+      "object-assign": "4.x.x"
+    },
+    "engines": {
+      "node": ">=0.10.0"
+    },
+    "license": "WTFPL",
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-sourcemap-istanbul-instrumenter-loader-0.2.0-8fd72e8abd16ded58918a7474db5bb3d0dbbcacd/package.json",
+    "readmeFilename": "README.md",
+    "readme": "## Istanbul instrumenter loader for [webpack](https://webpack.github.io/)\n\n[![npm](http://img.shields.io/npm/v/istanbul-instrumenter-loader.svg?style=flat-square)](https://www.npmjs.org/package/istanbul-instrumenter-loader)\n[![deps](http://img.shields.io/david/deepsweet/istanbul-instrumenter-loader.svg?style=flat-square)](https://david-dm.org/deepsweet/istanbul-instrumenter-loader#info=dependencies)\n\nInstrument JS files with [Istanbul](https://github.com/gotwarlost/istanbul) for subsequent code coverage reporting.\n\nUsing Babel to transpile ES6/ES7? Use [isparta-loader](https://github.com/deepsweet/isparta-loader) to coverage your original code.\n\n### Install\n\n```sh\n$ npm i -D istanbul-instrumenter-loader\n```\n\n### Setup\n\n#### References\n\n* [Using loaders](https://webpack.github.io/docs/using-loaders.html)\n* [karma-webpack](https://github.com/webpack/karma-webpack#karma-webpack)\n* [karma-coverage](https://github.com/karma-runner/karma-coverage#configuration)\n\n#### Project structure\n\nLet's say you have the following:\n\n```\n├── src/\n│   └── components/\n│       ├── bar/\n│       │   └── index.js\n│       └── foo/\n│           └── index.js\n└── test/\n    └── src/\n        └── components/\n            └── foo/\n                └── index.js\n```\n\nTo create a code coverage report for all components (even for those for which you have no tests yet) you have to require all the 1) sources and 2) tests. Something like it's described in [\"alternative usage\" of karma-webpack](https://github.com/webpack/karma-webpack#alternative-usage):\n\n#### test/index.js\n\n```js\n// require all `test/components/**/index.js`\nconst testsContext = require.context('./src/components/', true, /index\\.js$/);\n\ntestsContext.keys().forEach(testsContext);\n\n// require all `src/components/**/index.js`\nconst componentsContext = require.context('../src/components/', true, /index\\.js$/);\n\ncomponentsContext.keys().forEach(componentsContext);\n```\n\nThis file will be the only entry point for Karma:\n\n#### karma.conf.js\n\n```js\nconfig.set({\n    …\n    files: [\n        'test/index.js'\n    ],\n    preprocessors: {\n        'test/index.js': 'webpack'\n    },\n    webpack: {\n        …\n        module: {\n            preLoaders: [\n                // instrument only testing sources with Istanbul\n                {\n                    test: /\\.js$/,\n                    include: path.resolve('src/components/'),\n                    loader: 'istanbul-instrumenter'\n                }\n            ]\n        }\n        …\n    },\n    reporters: [ 'progress', 'coverage' ],\n    coverageReporter: {\n        type: 'text'\n    },\n    …\n});\n```\n\n### License\n[WTFPL](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-strip.jpg)\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/sourcemap-istanbul-instrumenter-loader/-/sourcemap-istanbul-instrumenter-loader-0.2.0.tgz#8fd72e8abd16ded58918a7474db5bb3d0dbbcacd",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/sourcemap-istanbul-instrumenter-loader/-/sourcemap-istanbul-instrumenter-loader-0.2.0.tgz",
+    "hash": "8fd72e8abd16ded58918a7474db5bb3d0dbbcacd",
+    "registry": "npm",
+    "packageName": "sourcemap-istanbul-instrumenter-loader"
+  },
+  "registry": "npm",
+  "hash": "8fd72e8abd16ded58918a7474db5bb3d0dbbcacd"
+}

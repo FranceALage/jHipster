@@ -1,0 +1,88 @@
+{
+  "manifest": {
+    "name": "@types/node",
+    "version": "8.0.18",
+    "description": "TypeScript definitions for Node.js",
+    "license": "MIT",
+    "contributors": [
+      {
+        "name": "Microsoft TypeScript",
+        "url": "http://typescriptlang.org"
+      },
+      {
+        "name": "DefinitelyTyped",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped"
+      },
+      {
+        "name": "Parambir Singh",
+        "url": "https://github.com/parambirs"
+      },
+      {
+        "name": "Roberto Desideri",
+        "url": "https://github.com/RobDesideri"
+      },
+      {
+        "name": "Christian Vaagland Tellnes",
+        "url": "https://github.com/tellnes"
+      },
+      {
+        "name": "Wilco Bakker",
+        "url": "https://github.com/WilcoBakker"
+      },
+      {
+        "name": "Nicolas Voigt",
+        "url": "https://github.com/octo-sniffle"
+      },
+      {
+        "name": "Chigozirim C.",
+        "url": "https://github.com/smac89"
+      },
+      {
+        "name": "Flarna",
+        "url": "https://github.com/Flarna"
+      },
+      {
+        "name": "Mariusz Wiktorczyk",
+        "url": "https://github.com/mwiktorczyk"
+      },
+      {
+        "name": "wwwy3y3",
+        "url": "https://github.com/wwwy3y3"
+      },
+      {
+        "name": "Daniel Imms",
+        "url": "https://github.com/Tyriar"
+      },
+      {
+        "name": "Deividas Bakanas",
+        "url": "https://github.com/DeividasBakanas"
+      }
+    ],
+    "main": "",
+    "repository": {
+      "type": "git",
+      "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "peerDependencies": {},
+    "typesPublisherContentHash": "35473aaf0a4b034b0928e59483823d5ba45c43f1891fc07cd3586ab32cfb2891",
+    "typeScriptVersion": "2.2",
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@types/node-8.0.18-9e96603a02a38889d08f451906f9cb56a2725ff5/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Installation\n> `npm install --save @types/node`\n\n# Summary\nThis package contains type definitions for Node.js (http://nodejs.org/).\n\n# Details\nFiles were exported from https://www.github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node\n\nAdditional Details\n * Last updated: Tue, 01 Aug 2017 14:04:54 GMT\n * Dependencies: events, net, stream, url, child_process, tls, http, readline, crypto\n * Global values: Buffer, NodeJS, SlowBuffer, Symbol, ___dirname, ___filename, clearImmediate, clearInterval, clearTimeout, console, exports, global, module, process, require, setImmediate, setInterval, setTimeout\n\n# Credits\nThese definitions were written by Microsoft TypeScript <http://typescriptlang.org>, DefinitelyTyped <https://github.com/DefinitelyTyped/DefinitelyTyped>, Parambir Singh <https://github.com/parambirs>, Roberto Desideri <https://github.com/RobDesideri>, Christian Vaagland Tellnes <https://github.com/tellnes>, Wilco Bakker <https://github.com/WilcoBakker>, Nicolas Voigt <https://github.com/octo-sniffle>, Chigozirim C. <https://github.com/smac89>, Flarna <https://github.com/Flarna>, Mariusz Wiktorczyk <https://github.com/mwiktorczyk>, wwwy3y3 <https://github.com/wwwy3y3>, Daniel Imms <https://github.com/Tyriar>, Deividas Bakanas <https://github.com/DeividasBakanas>.\n",
+    "licenseText": "    MIT License\n\n    Copyright (c) Microsoft Corporation. All rights reserved.\n\n    Permission is hereby granted, free of charge, to any person obtaining a copy\n    of this software and associated documentation files (the \"Software\"), to deal\n    in the Software without restriction, including without limitation the rights\n    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n    copies of the Software, and to permit persons to whom the Software is\n    furnished to do so, subject to the following conditions:\n\n    The above copyright notice and this permission notice shall be included in all\n    copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n    SOFTWARE\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@types/node/-/node-8.0.18.tgz#9e96603a02a38889d08f451906f9cb56a2725ff5",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@types/node/-/node-8.0.18.tgz",
+    "hash": "9e96603a02a38889d08f451906f9cb56a2725ff5",
+    "registry": "npm",
+    "packageName": "@types/node"
+  },
+  "registry": "npm",
+  "hash": "9e96603a02a38889d08f451906f9cb56a2725ff5"
+}

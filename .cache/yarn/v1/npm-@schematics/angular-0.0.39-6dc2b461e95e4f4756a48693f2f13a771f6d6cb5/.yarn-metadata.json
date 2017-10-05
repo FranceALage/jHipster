@@ -1,0 +1,50 @@
+{
+  "manifest": {
+    "name": "@schematics/angular",
+    "version": "0.0.39",
+    "description": "Schematics specific to Angular",
+    "keywords": [
+      "angular",
+      "devkit",
+      "sdk",
+      "Angular DevKit",
+      "blueprints",
+      "code generation",
+      "schematics"
+    ],
+    "schematics": "./collection.json",
+    "peerDependencies": {
+      "@angular-devkit/schematics": "0.0.26"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angular/devkit.git"
+    },
+    "engines": {
+      "node": ">= 6.9.0",
+      "npm": ">= 3.0.0"
+    },
+    "author": {
+      "name": "Angular Authors"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/angular/devkit/issues"
+    },
+    "homepage": "https://github.com/angular/devkit",
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@schematics/angular-0.0.39-6dc2b461e95e4f4756a48693f2f13a771f6d6cb5/package.json",
+    "licenseText": "The MIT License\n\nCopyright (c) 2017 Google, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.0.39.tgz#6dc2b461e95e4f4756a48693f2f13a771f6d6cb5",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.0.39.tgz",
+    "hash": "6dc2b461e95e4f4756a48693f2f13a771f6d6cb5",
+    "registry": "npm",
+    "packageName": "@schematics/angular"
+  },
+  "registry": "npm",
+  "hash": "6dc2b461e95e4f4756a48693f2f13a771f6d6cb5"
+}

@@ -1,0 +1,43 @@
+{
+  "manifest": {
+    "name": "ember-cli-string-utils",
+    "version": "1.1.0",
+    "description": "string utils extracted for other addons and blueprints",
+    "main": "index.js",
+    "scripts": {
+      "test": "mocha test"
+    },
+    "files": [
+      "index.js"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ember-cli/ember-cli-string-utils.git"
+    },
+    "author": {
+      "name": "ember-cli contributors"
+    },
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/ember-cli/ember-cli-string-utils/issues"
+    },
+    "homepage": "https://github.com/ember-cli/ember-cli-string-utils#readme",
+    "devDependencies": {
+      "chai": "^3.2.0",
+      "mocha": "^3.0.2"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-ember-cli-string-utils-1.1.0-39b677fc2805f55173735376fcef278eaa4452a1/package.json"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/ember-cli-string-utils/-/ember-cli-string-utils-1.1.0.tgz#39b677fc2805f55173735376fcef278eaa4452a1",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/ember-cli-string-utils/-/ember-cli-string-utils-1.1.0.tgz",
+    "hash": "39b677fc2805f55173735376fcef278eaa4452a1",
+    "registry": "npm",
+    "packageName": "ember-cli-string-utils"
+  },
+  "registry": "npm",
+  "hash": "39b677fc2805f55173735376fcef278eaa4452a1"
+}

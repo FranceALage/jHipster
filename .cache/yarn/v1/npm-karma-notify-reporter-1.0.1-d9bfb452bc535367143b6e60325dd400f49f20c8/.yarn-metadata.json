@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "name": "karma-notify-reporter",
+    "version": "1.0.1",
+    "description": "A karma reporter that reports results with OSX Notification Center, Growl or notify-send.",
+    "author": {
+      "name": "Justin Cataldo",
+      "email": "jdcataldo@gmail.com"
+    },
+    "main": "index.js",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/jdcataldo/karma-notify-reporter.git"
+    },
+    "bugs": {
+      "url": "http://github.com/jdcataldo/karma-notify-reporter/issues",
+      "email": "jdcataldo@gmail.com"
+    },
+    "keywords": [
+      "karma-plugin",
+      "karma-reporter",
+      "osx",
+      "notification center",
+      "growl",
+      "notify-send"
+    ],
+    "dependencies": {
+      "node-notifier": "^4.5.0"
+    },
+    "peerDependencies": {
+      "karma": ">=0.9"
+    },
+    "license": "MIT",
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-karma-notify-reporter-1.0.1-d9bfb452bc535367143b6e60325dd400f49f20c8/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# karma-notify-reporter\n\n> Report test results using OSX Notification Center, [Growl](http://growl.info/) or notify-send.\n\n[![Downloads](https://img.shields.io/npm/dm/karma-notify-reporter.svg)](https://www.npmjs.com/package/karma-notify-reporter)\n\nBuilt on top of [node-notifier](https://github.com/mikaelbr/node-notifier).  \n\nBy default Notification Center will be used on Mac, notify-send will be used on Linux, and Growl will be used if neither Mac 10.8 or Linux.\n\n## Installation \n\n```js\nnpm install karma-notify-reporter --save-dev\n```\n\n###\n\n## Configuration\n```js\n// karma.conf.js\nmodule.exports = function(config) {\n  config.set({\n    reporters: ['progress', 'notify'],\n\n    // Optional Settings\n    notifyReporter: {\n      reportEachFailure: true, // Default: false, Will notify on every failed sepc\n      reportSuccess: false, // Default: true, Will notify when a suite was successful\n    }\n  });\n};\n```\n\nYou can pass list of reporters as a CLI argument too:\n```bash\nkarma start --reporters notify,dots\n```\n",
+    "licenseText": "The MIT License\n\nCopyright (C) 2011-2013 Google, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies\nof the Software, and to permit persons to whom the Software is furnished to do\nso, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS\nFOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR\nCOPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER\nIN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/karma-notify-reporter/-/karma-notify-reporter-1.0.1.tgz#d9bfb452bc535367143b6e60325dd400f49f20c8",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/karma-notify-reporter/-/karma-notify-reporter-1.0.1.tgz",
+    "hash": "d9bfb452bc535367143b6e60325dd400f49f20c8",
+    "registry": "npm",
+    "packageName": "karma-notify-reporter"
+  },
+  "registry": "npm",
+  "hash": "d9bfb452bc535367143b6e60325dd400f49f20c8"
+}

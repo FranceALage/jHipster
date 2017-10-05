@@ -1,0 +1,78 @@
+{
+  "manifest": {
+    "name": "jhipster-core",
+    "version": "1.3.5",
+    "description": "JHipster's own domain language and core objects",
+    "main": "module/index.js",
+    "keywords": [
+      "JHipster",
+      "DSL",
+      "JDL"
+    ],
+    "scripts": {
+      "lint": "eslint .",
+      "lint-fix": "npm run lint -- --fix",
+      "check-dependencies": "node ./scripts/check_dependencies.js",
+      "test": "npm run lint && mocha test",
+      "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha test --",
+      "peg-parse": "pegjs -o lib/dsl/pegjs_parser.js lib/dsl/grammar.txt",
+      "prepublish": "npm run peg-parse && npm test",
+      "release": "git push && git push --tags && npm publish",
+      "release-patch": "npm version patch -a -m \"Update to %s\" && npm run release",
+      "release-minor": "npm version minor -a -m \"Update to %s\" && npm run release",
+      "release-major": "npm version major -a -m \"Update to %s\" && npm run release"
+    },
+    "homepage": "https://github.com/jhipster/jhipster-core#readme",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jhipster/jhipster-core.git"
+    },
+    "author": {
+      "name": "Mathieu Abou-Aichi",
+      "email": "mathieu.aa@free.fr",
+      "url": "https://github.com/MathieuAA"
+    },
+    "bugs": {
+      "url": "https://github.com/jhipster/jhipster-core/issues"
+    },
+    "license": "Apache-2.0",
+    "licenses": [
+      {
+        "type": "Apache 2.0"
+      }
+    ],
+    "dependencies": {
+      "lodash": "4.17.4"
+    },
+    "devDependencies": {
+      "chai": "3.5.0",
+      "eslint": "3.19.0",
+      "eslint-config-airbnb-base": "11.2.0",
+      "eslint-plugin-import": "2.6.0",
+      "istanbul": "0.4.5",
+      "mocha": "3.3.0",
+      "mocha-clean": "1.0.0",
+      "pegjs": "0.10.0"
+    },
+    "peerDependencies": {},
+    "engines": {
+      "node": ">=6.9.0",
+      "npm": ">=2.14.2"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-jhipster-core-1.3.5-fb42e8d8c020ea95a06d85d2f8bba404747fe8bd/package.json",
+    "readmeFilename": "README.md",
+    "readme": "[![Build Status](https://travis-ci.org/jhipster/jhipster-core.svg?branch=master)](https://travis-ci.org/jhipster/jhipster-core) [![Dependency Status](https://david-dm.org/jhipster/jhipster-core.svg)](https://david-dm.org/jhipster/jhipster-core) [![devDependency Status](https://david-dm.org/jhipster/jhipster-core/dev-status.svg)](https://david-dm.org/jhipster/jhipster-core#info=devDependencies) [![peerDependency Status](https://david-dm.org/jhipster/jhipster-core/peer-status.svg)](https://david-dm.org/jhipster/jhipster-core#info=peerDependencies)\n\nWelcome to the official repository of everything common to JHipster and its projects, like the JDL (JHipster Domain Language).\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/jhipster-core/-/jhipster-core-1.3.5.tgz#fb42e8d8c020ea95a06d85d2f8bba404747fe8bd",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/jhipster-core/-/jhipster-core-1.3.5.tgz",
+    "hash": "fb42e8d8c020ea95a06d85d2f8bba404747fe8bd",
+    "registry": "npm",
+    "packageName": "jhipster-core"
+  },
+  "registry": "npm",
+  "hash": "fb42e8d8c020ea95a06d85d2f8bba404747fe8bd"
+}

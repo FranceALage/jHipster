@@ -1,0 +1,40 @@
+{
+  "manifest": {
+    "name": "@angular/compiler",
+    "version": "4.3.2",
+    "description": "Angular - the compiler library",
+    "main": "./bundles/compiler.umd.js",
+    "module": "./@angular/compiler.es5.js",
+    "es2015": "./@angular/compiler.js",
+    "typings": "./compiler.d.ts",
+    "author": {
+      "name": "angular"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "tslib": "^1.7.1"
+    },
+    "peerDependencies": {
+      "@angular/core": "4.3.2"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angular/angular.git"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@angular/compiler-4.3.2-b7922d0b2087a82e7b516a1c111a5993054f68b3/package.json",
+    "readmeFilename": "README.md",
+    "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@angular/compiler/-/compiler-4.3.2.tgz#b7922d0b2087a82e7b516a1c111a5993054f68b3",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@angular/compiler/-/compiler-4.3.2.tgz",
+    "hash": "b7922d0b2087a82e7b516a1c111a5993054f68b3",
+    "registry": "npm",
+    "packageName": "@angular/compiler"
+  },
+  "registry": "npm",
+  "hash": "b7922d0b2087a82e7b516a1c111a5993054f68b3"
+}

@@ -1,0 +1,62 @@
+{
+  "manifest": {
+    "name": "internal-ip",
+    "version": "2.0.3",
+    "description": "Get your internal IP address",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/sindresorhus/internal-ip.git"
+    },
+    "author": {
+      "name": "Sindre Sorhus",
+      "email": "sindresorhus@gmail.com",
+      "url": "sindresorhus.com"
+    },
+    "engines": {
+      "node": ">=4"
+    },
+    "scripts": {
+      "test": "xo && ava"
+    },
+    "files": [
+      "index.js"
+    ],
+    "keywords": [
+      "ip",
+      "ipv6",
+      "ipv4",
+      "address",
+      "internal",
+      "local",
+      "machine",
+      "system",
+      "net",
+      "gateway"
+    ],
+    "dependencies": {
+      "default-gateway": "^2.2.2",
+      "ipaddr.js": "^1.5.2"
+    },
+    "devDependencies": {
+      "ava": "*",
+      "xo": "*"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-internal-ip-2.0.3-ed3cf9b671ac7ff23037bfacad42eb439cd9546c/package.json",
+    "readmeFilename": "readme.md",
+    "readme": "# internal-ip [![Build Status](https://travis-ci.org/sindresorhus/internal-ip.svg?branch=master)](https://travis-ci.org/sindresorhus/internal-ip)\n\n> Get your internal IP address\n\n\n## Install\n\n```\n$ npm install internal-ip\n```\n\n\n## Usage\n\n```js\nconst internalIp = require('internal-ip');\n\ninternalIp.v6().then(ip => {\n\tconsole.log(ip);\n\t//=> 'fe80::1'\n});\n\ninternalIp.v4().then(ip => {\n\tconsole.log(ip);\n\t//=> '10.0.0.79'\n});\n```\n\nThe module relies on tools provided by most operating systems. One notable exception may be the `ip` command which is used on Linux. If it's missing, it can usually be installed with the `iproute2` package in your package manager.\n\nIn the case no address can be determined, `::1` or `127.0.0.1` will be returned as a fallback. If you think this is incorrect, please open an [issue](https://github.com/sindresorhus/internal-ip/issues/new).\n\n\n## Related\n\n- [internal-ip-cli](https://github.com/sindresorhus/internal-ip-cli) - CLI for this module\n- [public-ip](https://github.com/sindresorhus/public-ip) - Get your public IP address\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
+    "licenseText": "MIT License\n\nCopyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/internal-ip/-/internal-ip-2.0.3.tgz#ed3cf9b671ac7ff23037bfacad42eb439cd9546c",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/internal-ip/-/internal-ip-2.0.3.tgz",
+    "hash": "ed3cf9b671ac7ff23037bfacad42eb439cd9546c",
+    "registry": "npm",
+    "packageName": "internal-ip"
+  },
+  "registry": "npm",
+  "hash": "ed3cf9b671ac7ff23037bfacad42eb439cd9546c"
+}

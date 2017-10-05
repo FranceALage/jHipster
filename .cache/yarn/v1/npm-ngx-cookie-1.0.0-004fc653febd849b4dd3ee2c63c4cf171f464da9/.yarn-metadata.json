@@ -1,0 +1,112 @@
+{
+  "manifest": {
+    "name": "ngx-cookie",
+    "version": "1.0.0",
+    "description": "Implementation of Angular 1.x $cookies service to Angular",
+    "scripts": {
+      "clean": "rimraf bundles coverage src/**/*.d.ts src/**/*.metadata.json src/**/*.js tests/**/*.d.ts tests/**/*.metadata.json tests/**/*.js index.d.ts index.metadata.json index.js",
+      "test": "karma start",
+      "test-watch": "karma start --singleRun=false --autoWatch=true",
+      "prepublish": "ngc && npm run build",
+      "build": "webpack",
+      "commit": "npm run prepublish && npm test && git-cz",
+      "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/salemdar/ngx-cookie.git"
+    },
+    "keywords": [
+      "angular2",
+      "angular",
+      "ng2",
+      "ng",
+      "cookie",
+      "cookies",
+      "angular2-cookie",
+      "angular2-cookies",
+      "ng2-cookies",
+      "ng2-cookie",
+      "ng-cookies",
+      "ng-cookie",
+      "ngx-cookie",
+      "ngx-cookies"
+    ],
+    "author": {
+      "name": "Samet Alemdar",
+      "email": "sa.alemdar@hotmail.com"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/salemdar/ngx-cookie#readme",
+    "bugs": {
+      "url": "https://github.com/salemdar/ngx-cookie/issues"
+    },
+    "main": "bundles/ngx-cookie.umd.js",
+    "module": "index.js",
+    "typings": "index.d.ts",
+    "peerDependencies": {
+      "@angular/core": ">=2.0.0 || >=4.0.0-beta.0"
+    },
+    "devDependencies": {
+      "@angular/common": "2.4.9",
+      "@angular/compiler": "2.4.9",
+      "@angular/compiler-cli": "2.4.9",
+      "@angular/core": "2.4.9",
+      "@angular/platform-browser": "2.4.9",
+      "@angular/platform-browser-dynamic": "2.4.9",
+      "@angular/platform-server": "2.4.9",
+      "@types/hammerjs": "2.0.34",
+      "@types/jasmine": "2.5.43",
+      "@types/node": "7.0.5",
+      "awesome-typescript-loader": "3.0.8",
+      "clean-webpack-plugin": "0.1.15",
+      "codelyzer": "2.0.1",
+      "commitizen": "2.9.6",
+      "core-js": "2.4.1",
+      "cz-conventional-changelog": "2.0.0",
+      "istanbul-instrumenter-loader": "2.0.0",
+      "jasmine-core": "2.5.2",
+      "karma": "1.5.0",
+      "karma-chrome-launcher": "2.0.0",
+      "karma-coverage": "1.1.1",
+      "karma-jasmine": "1.1.0",
+      "karma-mocha-reporter": "2.2.2",
+      "karma-remap-coverage": "0.1.4",
+      "karma-sourcemap-loader": "0.3.7",
+      "karma-webpack": "2.0.2",
+      "loader-utils": "1.0.2",
+      "reflect-metadata": "0.1.10",
+      "rimraf": "2.6.1",
+      "rxjs": "5.2.0",
+      "semantic-release": "6.3.2",
+      "source-map-loader": "0.1.6",
+      "ts-helpers": "1.1.2",
+      "tslint": "4.5.1",
+      "tslint-loader": "3.4.3",
+      "typescript": "2.2.1",
+      "webpack": "2.2.1",
+      "zone.js": "0.7.7"
+    },
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+      }
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-ngx-cookie-1.0.0-004fc653febd849b4dd3ee2c63c4cf171f464da9/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# ngx-cookie  [![Build Status](https://travis-ci.org/salemdar/ngx-cookie.svg?branch=master)](https://travis-ci.org/salemdar/ngx-cookie) [![npm version](https://img.shields.io/npm/v/ngx-cookie.svg)](https://www.npmjs.com/package/ngx-cookie) [![Downloads](http://img.shields.io/npm/dm/ngx-cookie.svg)](https://npmjs.org/package/ngx-cookie)\n\n> Implementation of Angular 1.x $cookies service to Angular. Successor of [angular2-cookie](https://github.com/salemdar/angular2-cookie)\n\n## Table of contents:\n- [Get Started](#get-started)\n  - [Installation](#installation)\n  - [Usage](#usage)\n  - [AngularUniversal](#universal)\n  - [Examples](#examples)\n    - [angular-quickstart](#quickstart)\n    - [angular-seed](#seed)\n    - [angular-cli](#cli)\n- [CookieService](#cookieservice)\n  - [get()](#get)\n  - [getObject()](#getobject)\n  - [getAll()](#getall)\n  - [put()](#put)\n  - [putObject()](#putobject)\n  - [remove()](#remove)\n  - [removeAll()](#removeall)\n- [Options](#options)\n\n## <a name=\"get-started\"></a> Get Started\n\n### <a name=\"installation\"></a> Installation\n\nYou can install this package locally with npm.\n\n```bash\n# To get the latest stable version and update package.json file:\nnpm install ngx-cookie --save\n```\n\nAfter installing the library, it should be included in the SystemJS configurations.\n\n```javascript\n/**\n * System configuration for Angular samples\n * Adjust as necessary for your application needs.\n * Taken from: https://github.com/angular/quickstart/blob/master/systemjs.config.js\n */\n(function (global) {\n  System.config({\n    paths: {\n      // paths serve as alias\n      'npm:': 'node_modules/'\n    },\n    // map tells the System loader where to look for things\n    map: {\n      // our app is within the app folder\n      app: 'app',\n\n      // angular bundles\n      '@angular/core': 'npm:@angular/core/bundles/core.umd.js',\n      '@angular/common': 'npm:@angular/common/bundles/common.umd.js',\n      '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',\n      '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',\n      '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',\n      '@angular/http': 'npm:@angular/http/bundles/http.umd.js',\n      '@angular/router': 'npm:@angular/router/bundles/router.umd.js',\n      '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',\n\n      // other libraries\n      'rxjs':                       'npm:rxjs',\n      'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',\n      'ngx-cookie':                 'npm:ngx-cookie'\n    },\n    // packages tells the System loader how to load when no filename and/or no extension\n    packages: {\n      app: {\n        main: './main.js',\n        defaultExtension: 'js'\n      },\n      rxjs: {\n        defaultExtension: 'js'\n      },\n      'angular2-in-memory-web-api': {\n        main: './index.js',\n        defaultExtension: 'js'\n      },\n      'ngx-cookie': {\n        main: './index.js',\n        defaultExtension: 'js'\n      }\n    }\n  });\n})(this);\n```\n\n### <a name=\"usage\"></a> Usage\n\n**CookieService** class is an injectable service with angular `@Injectable()` decorator. Therefore, it needs to be registered in the providers array (encouraged way).\nThen, it will be available in the constructor of the component class.\n\n```typescript\nimport { NgModule }      from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { CookieModule } from 'ngx-cookie';\n\nimport { AppComponent }  from './app.component';\n\n@NgModule({\n  imports: [ BrowserModule, CookieModule.forRoot() ],\n  declarations: [ AppComponent ],\n  bootstrap: [ AppComponent ]\n})\nexport class AppModule { }\n```\n\n```typescript\nimport { Component } from '@angular/core';\nimport { CookieService } from 'ngx-cookie';\n\n@Component({\n    selector: 'my-very-cool-app',\n    template: '<h1>My Angular2 App with Cookies</h1>'\n})\n\nexport class AppComponent {\n  constructor(private _cookieService:CookieService){}\n\n  getCookie(key: string){\n    return this._cookieService.get(key);\n  }\n}\n```\n\n\n### <a name=\"examples\"></a> Examples\n\nHere you can find some usage examples with popular boilerplate libraries.\n\n#### <a name=\"quickstart\"></a> Angular2-quickstart\n\nA boilerplate provided by Angular team.\n_(Link: [https://github.com/angular/quickstart](https://github.com/angular/quickstart))_\n\nJust edit the `systemjs.config.js` file and add the `ngx-cookie` there.\n\n```typescript\n/**\n * System configuration for Angular 2 samples\n * Adjust as necessary for your application needs.\n */\n(function (global) {\n  System.config({\n    paths: {\n      // paths serve as alias\n      'npm:': 'node_modules/'\n    },\n    // map tells the System loader where to look for things\n    map: {\n      // our app is within the app folder\n      app: 'app',\n\n      // angular bundles\n      '@angular/core': 'npm:@angular/core/bundles/core.umd.js',\n      '@angular/common': 'npm:@angular/common/bundles/common.umd.js',\n      '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',\n      '@angular/platform-browser': 'npm:@angular/platform-browser/bundles/platform-browser.umd.js',\n      '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',\n      '@angular/http': 'npm:@angular/http/bundles/http.umd.js',\n      '@angular/router': 'npm:@angular/router/bundles/router.umd.js',\n      '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',\n\n      // other libraries\n      'rxjs':                       'npm:rxjs',\n      'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',\n      'ngx-cookie':            'npm:ngx-cookie/bundles/ngx-cookie.umd.js'\n    },\n    // packages tells the System loader how to load when no filename and/or no extension\n    packages: {\n      app: {\n        main: './main.js',\n        defaultExtension: 'js'\n      },\n      rxjs: {\n        defaultExtension: 'js'\n      },\n      'angular2-in-memory-web-api': {\n        main: './index.js',\n        defaultExtension: 'js'\n      }\n    }\n  });\n})(this);\n```\n\n#### <a name=\"seed\"></a> Angular2-seed\n\nA popular seed project.\n_(Link: [https://github.com/mgechev/angular2-seed](https://github.com/mgechev/angular2-seed))_\n\nAdd the following settings to the (constructor of) `ProjectConfig` class (path: `./tools/config/project.config.ts`).\n\n```typescript\nlet additionalPackages: ExtendPackages[] = [{\n  name: 'ngx-cookie',\n  // Path to the package's bundle\n  path: 'node_modules/ngx-cookie/bundles/ngx-cookie.umd.js'\n}];\n\nthis.addPackagesBundles(additionalPackages);\n```\n\nDo not forget to inject the `CookieModule` in the module `AppModule` and `SharedModule`.\n\n#### <a name=\"cli\"></a> Angular-cli\n\nA CLI tool for Angular2.\n_(Link: [https://github.com/angular/angular-cli](https://github.com/angular/angular-cli))_\n\nEdit the `.angular-cli.json` and add `ngx-cookie` to the `scripts`.\n\n```javascript\n// ...\n\"scripts\": [\n  \"../node_modules/ngx-cookie/bundles/ngx-cookie.umd.js\",\n  // ...\n]\n// ...\n```\n\n\n## <a name=\"cookieservice\"></a> CookieService\n\nThere are 7 methods available in the `CookieService` (6 standard methods from **Angular 1** and 1 extra `removeAll()` method for convenience)\n\n### <a name=\"get\"></a> get()\nReturns the value of given cookie key.\n\n```typescript\n/**\n * @param {string} key Id to use for lookup.\n * @returns {string} Raw cookie value.\n */\nget(key: string): string;\n```\n\n### <a name=\"getobject\"></a> getObject()\nReturns the deserialized value of given cookie key.\n\n```typescript\n/**\n * @param {string} key Id to use for lookup.\n * @returns {Object} Deserialized cookie value.\n */\ngetObject(key: string): Object;\n```\n\n### <a name=\"getall\"></a> getAll()\nReturns a key value object with all the cookies.\n\n```typescript\n/**\n * @returns {Object} All cookies\n */\ngetAll(): any;\n```\n\n### <a name=\"put\"></a> put()\nSets a value for given cookie key.\n\n```typescript\n/**\n * @param {string} key Id for the `value`.\n * @param {string} value Raw value to be stored.\n * @param {CookieOptionsArgs} options (Optional) Options object.\n */\nput(key: string, value: string, options?: CookieOptionsArgs): void;\n```\n\n### <a name=\"putobject\"></a> putObject()\nSerializes and sets a value for given cookie key.\n\n```typescript\n/**\n * @param {string} key Id for the `value`.\n * @param {Object} value Value to be stored.\n * @param {CookieOptionsArgs} options (Optional) Options object.\n */\nputObject(key: string, value: Object, options?: CookieOptionsArgs): void;\n```\n\n### <a name=\"remove\"></a> remove()\nRemove given cookie.\n\n```typescript\n/**\n * @param {string} key Id of the key-value pair to delete.\n * @param {CookieOptionsArgs} options (Optional) Options object.\n */\nremove(key: string, options?: CookieOptionsArgs): void;\n```\n\n### <a name=\"removeall\"></a> removeAll()\nRemove all cookies.\n\n```typescript\n/**\n */\nremoveAll(): void;\n```\n\n## <a name=\"options\"></a> Options\n\nOptions object should be a type of `CookieOptionsArgs` interface. The object may have following properties:\n\n- **path** - {string} - The cookie will be available only for this path and its sub-paths. By default, this is the URL that appears in your `<base>` tag.\n- **domain** - {string} - The cookie will be available only for this domain and its sub-domains. For security reasons the user agent will not accept the cookie if the current domain is not a sub-domain of this domain or equal to it.\n- **expires** - {string|Date} - String of the form \"Wdy, DD Mon YYYY HH:MM:SS GMT\" or a Date object indicating the exact date/time this cookie will expire.\n- **secure** - {boolean} - If `true`, then the cookie will only be available through a secured connection.\n",
+    "licenseText": "MIT License\n\nCopyright (c) 2017 Samet Alemdar\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/ngx-cookie/-/ngx-cookie-1.0.0.tgz#004fc653febd849b4dd3ee2c63c4cf171f464da9",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/ngx-cookie/-/ngx-cookie-1.0.0.tgz",
+    "hash": "004fc653febd849b4dd3ee2c63c4cf171f464da9",
+    "registry": "npm",
+    "packageName": "ngx-cookie"
+  },
+  "registry": "npm",
+  "hash": "004fc653febd849b4dd3ee2c63c4cf171f464da9"
+}

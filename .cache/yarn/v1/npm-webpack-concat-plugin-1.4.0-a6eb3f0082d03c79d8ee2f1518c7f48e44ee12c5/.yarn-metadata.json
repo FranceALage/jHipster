@@ -1,0 +1,46 @@
+{
+  "manifest": {
+    "name": "webpack-concat-plugin",
+    "version": "1.4.0",
+    "description": "webpack file concat",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/hxlniada/webpack-concat-plugin.git"
+    },
+    "keywords": [
+      "webpack",
+      "concat"
+    ],
+    "author": {
+      "name": "huangxueliang"
+    },
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/hxlniada/webpack-concat-plugin/issues"
+    },
+    "homepage": "https://github.com/hxlniada/webpack-concat-plugin#readme",
+    "dependencies": {
+      "md5": "^2.2.1",
+      "uglify-js": "^2.8.29"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-webpack-concat-plugin-1.4.0-a6eb3f0082d03c79d8ee2f1518c7f48e44ee12c5/package.json",
+    "readmeFilename": "readme.md",
+    "readme": "# webpack-concat-plugin\n[![npm package](https://img.shields.io/npm/v/webpack-concat-plugin.svg)](https://www.npmjs.org/package/webpack-concat-plugin)\n[![npm downloads](http://img.shields.io/npm/dm/webpack-concat-plugin.svg)](https://www.npmjs.org/package/webpack-concat-plugin)\n> a plugin to help webpack to concat js and inject to html-webpack-plugin\n### why\nwebpack is really powerful, but when I just want to concat the static file and inject to html without webpack JSONP code wrapper. After all days search, it seems impossible to do that without other tool's help.\n\n### install\n```\nnpm install webpack-concat-plugin --save-dev\n```\n\n### features\n* concat\n* inject to html(with html-webpack-plugin)\n\n### usage\n```\nconst ConcatPlugin = require('webpack-concat-plugin');\n\nnew ConcatPlugin({\n    uglify: true, // or you can set uglifyjs options\n    useHash: true, // md5 file\n    sourceMap: true, // generate sourceMap\n    name: 'flexible', // used in html-webpack-plugin\n    fileName: '[name].[hash].bundle.js', // would output to 'flexible.d41d8cd98f00b204e980.bundle.js'\n    filesToConcat: ['./src/lib/flexible.js', './src/lib/makegrid.js']\n});\n\n```\n### inject to html(by hand)\n```\ndoctype html\n...\n    script(src=htmlWebpackPlugin.files.webpackConcat.flexible)\n...\n```\n\n### todo\n* add css support\n* auto inject to html\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/webpack-concat-plugin/-/webpack-concat-plugin-1.4.0.tgz#a6eb3f0082d03c79d8ee2f1518c7f48e44ee12c5",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/webpack-concat-plugin/-/webpack-concat-plugin-1.4.0.tgz",
+    "hash": "a6eb3f0082d03c79d8ee2f1518c7f48e44ee12c5",
+    "registry": "npm",
+    "packageName": "webpack-concat-plugin"
+  },
+  "registry": "npm",
+  "hash": "a6eb3f0082d03c79d8ee2f1518c7f48e44ee12c5"
+}

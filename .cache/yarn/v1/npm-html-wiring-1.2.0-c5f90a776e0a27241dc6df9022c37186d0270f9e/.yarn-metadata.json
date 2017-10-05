@@ -1,0 +1,52 @@
+{
+  "manifest": {
+    "name": "html-wiring",
+    "version": "1.2.0",
+    "description": "Set of utilities to update HTML files",
+    "license": "MIT",
+    "keywords": [
+      "html",
+      "dom",
+      "wiring",
+      "cheerio"
+    ],
+    "author": {
+      "name": "The Yeoman Team"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/yeoman/html-wiring.git"
+    },
+    "scripts": {
+      "test": "mocha",
+      "prepublish": "nsp audit-package"
+    },
+    "files": [
+      "index.js"
+    ],
+    "dependencies": {
+      "cheerio": "^0.19.0",
+      "detect-newline": "^1.0.3"
+    },
+    "devDependencies": {
+      "mocha": "^2.2.1",
+      "nsp": "*",
+      "yeoman-assert": "^1.0.0"
+    },
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-html-wiring-1.2.0-c5f90a776e0a27241dc6df9022c37186d0270f9e/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Yeoman html-wiring [![Build Status](https://travis-ci.org/yeoman/html-wiring.svg?branch=master)](https://travis-ci.org/yeoman/html-wiring)\n\nSet of utilities to update HTML files\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/html-wiring/-/html-wiring-1.2.0.tgz#c5f90a776e0a27241dc6df9022c37186d0270f9e",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/html-wiring/-/html-wiring-1.2.0.tgz",
+    "hash": "c5f90a776e0a27241dc6df9022c37186d0270f9e",
+    "registry": "npm",
+    "packageName": "html-wiring"
+  },
+  "registry": "npm",
+  "hash": "c5f90a776e0a27241dc6df9022c37186d0270f9e"
+}

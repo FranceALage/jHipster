@@ -1,0 +1,63 @@
+{
+  "manifest": {
+    "name": "@angular/compiler-cli",
+    "version": "4.3.2",
+    "description": "Angular - the compiler CLI for Node.js",
+    "main": "index.js",
+    "typings": "index.d.ts",
+    "bin": {
+      "ngc": "./src/main.js",
+      "ng-xi18n": "./src/extract_i18n.js"
+    },
+    "dependencies": {
+      "@angular/tsc-wrapped": "4.3.2",
+      "reflect-metadata": "^0.1.2",
+      "minimist": "^1.2.0"
+    },
+    "peerDependencies": {
+      "typescript": "^2.0.2",
+      "@angular/compiler": "4.3.2",
+      "@angular/core": "4.3.2"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/angular/angular.git"
+    },
+    "keywords": [
+      "angular",
+      "compiler"
+    ],
+    "contributors": [
+      {
+        "name": "Tobias Bosch",
+        "email": "tbosch@google.com",
+        "url": "https://angular.io/"
+      },
+      {
+        "name": "Alex Eagle",
+        "email": "alexeagle@google.com",
+        "url": "https://angular.io/"
+      }
+    ],
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/angular/angular/issues"
+    },
+    "homepage": "https://github.com/angular/angular/tree/master/packages/compiler-cli",
+    "_registry": "npm",
+    "_loc": "/home/ubuntu/.cache/yarn/v1/npm-@angular/compiler-cli-4.3.2-a9c4b94590c82d0e3f28b1de497be636e21c3cc6/package.json",
+    "readmeFilename": "README.md",
+    "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-4.3.2.tgz#a9c4b94590c82d0e3f28b1de497be636e21c3cc6",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-4.3.2.tgz",
+    "hash": "a9c4b94590c82d0e3f28b1de497be636e21c3cc6",
+    "registry": "npm",
+    "packageName": "@angular/compiler-cli"
+  },
+  "registry": "npm",
+  "hash": "a9c4b94590c82d0e3f28b1de497be636e21c3cc6"
+}
