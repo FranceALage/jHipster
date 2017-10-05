@@ -47,7 +47,7 @@ fi
 
 git fetch
 git checkout master
-git merge
+git merge origin/master
 git add -A
 git commit -m "$MESSAGE"
 git push origin master
