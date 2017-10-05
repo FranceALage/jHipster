@@ -26,6 +26,7 @@
 	L
 
 # File marks:
+<<<<<<< HEAD
 '0  35  0  ~/commit2.sh
 '1  36  58  ~/commit2.sh
 '2  1  0  ~/commit2.sh
@@ -41,6 +42,22 @@
 -'  35  0  ~/commit2.sh
 -'  1  0  ~/commit2.sh
 -'  36  58  ~/commit2.sh
+=======
+'0  36  58  ~/commit2.sh
+'1  1  0  ~/commit2.sh
+'2  50  22  ~/commit.sh
+'3  55  3  ~/commit.sh
+'4  23  4  ~/src/main/webapp/index.html
+'5  22  0  ~/src/main/webapp/index.html
+'6  1  0  ~/src/main/webapp/app/layouts/index.ts
+'7  7  19  ~/src/main/webapp/index.html
+'8  2  0  ~/src/main/webapp/index.html
+'9  1  0  ~/src/main/webapp/index.html
+
+# Jumplist (newest first):
+-'  36  58  ~/commit2.sh
+-'  1  0  ~/commit2.sh
+>>>>>>> origin/master
 -'  50  22  ~/commit.sh
 -'  1  0  ~/commit.sh
 -'  55  3  ~/commit.sh
@@ -136,15 +153,26 @@
 -'  1  0  ~/src/main/resources/config/application-dev.yml
 -'  31  25  ~/src/main/resources/config/application-dev.yml
 -'  1  0  ~/src/main/resources/config/application-dev.yml
+<<<<<<< HEAD
+=======
+-'  31  25  ~/src/main/resources/config/application-dev.yml
+>>>>>>> origin/master
 
 # History of marks within files (newest to oldest):
 
 > ~/commit2.sh
+<<<<<<< HEAD
 	"	35	0
 	^	35	1
 	.	35	0
 	+	36	58
 	+	35	0
+=======
+	"	36	58
+	^	36	59
+	.	36	58
+	+	36	58
+>>>>>>> origin/master
 
 > ~/commit.sh
 	"	50	22

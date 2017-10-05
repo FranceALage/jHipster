@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
 # minhaloja
 This application was generated using JHipster 4.9.0, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.9.0](http://www.jhipster.tech/documentation-archive/v4.9.0).
 
@@ -179,6 +182,9 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 # jHipster
 jHipster configuration
 >>>>>>> origin/master
+<<<<<<< HEAD
 =======
 # jHipster2
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master

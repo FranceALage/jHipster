@@ -32,8 +32,13 @@ if [ ! -d ".git" ]
 then
   echo "$KEY" > /var/tmp/franceal && chmod 400 /var/tmp/franceal
   git init
+<<<<<<< HEAD
 #  git config --local core.sshCommand "ssh -i /var/tmp/franceal -o StrictHostKeyChecking=no"
   git remote add origin git@github.com:francelage/jHipster.git
+=======
+  git config --local core.sshCommand "ssh -i /var/tmp/franceal -o StrictHostKeyChecking=no"
+  git remote add origin git@github.com:francelage/jHipster2.git
+>>>>>>> origin/master
   git config user.name "France Andrade Lage"
   git config user.email "france.andrade.lage@gmail.com"
 fi
